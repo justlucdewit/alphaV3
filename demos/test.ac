@@ -1,0 +1,3 @@
+let str "hello world\n"
+print str
+exit 0

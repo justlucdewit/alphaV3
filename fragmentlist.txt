@@ -1,0 +1,10 @@
+-fileReader
+	this frament takes a string representing a file location
+	it will then open that file, throw and error if it 
+	doesnt want to open and return the content of the file
+	if it does want to open
+
+-errorSystem
+	this fragment takes a number representing the error code
+	and will then display that error, and end the execution
+	with code 1

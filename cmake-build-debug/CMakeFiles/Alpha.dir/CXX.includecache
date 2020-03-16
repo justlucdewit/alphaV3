@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/programming/cpp/alphav3/fileReader.cpp
+iostream
+-
+fstream
+-
+string
+-
+fileReader.hpp
+D:/programming/cpp/alphav3/fileReader.hpp
+throwError.hpp
+D:/programming/cpp/alphav3/throwError.hpp
+
+D:/programming/cpp/alphav3/fileReader.hpp
+
+D:/programming/cpp/alphav3/main.cpp
+iostream
+-
+string
+-
+fileReader.hpp
+D:/programming/cpp/alphav3/fileReader.hpp
+
+D:/programming/cpp/alphav3/throwError.cpp
+iostream
+-
+
+D:/programming/cpp/alphav3/throwError.hpp
+
