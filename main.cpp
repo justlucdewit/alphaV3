@@ -1,7 +1,10 @@
 #include <iostream>
+#include <vector>
 #include <string>
 
+#include "fragments/tokenSplitter/tokenSplitter.hpp"
 #include "fragments/fileReader/fileReader.hpp"
+#include "fragments/tokenSys/tokenSys.hpp"
 
 /*
 	alpha is the interpreter CLI for the alphacode language
@@ -21,8 +24,17 @@ int main(int argc, char** argv)
 {
     if (argc >= 2)
 	{//assume the argument is a file name to be ran
-		std::string sourceCode = fileReader(std::string(argv[1]));
-		std::cout << sourceCode;
+
+        //extract the source code from the file
+		const char* sourceCode = fileReader(argv[1]);
+
+		//split the source code into tokens according to spaces and strings
+        std::vector<Token> tokens = tokenSplitter(sourceCode);
+
+		for (int i = 0; i <= tokens.size(); i++)
+		{
+            printToken(tokens[i]);
+		}
     }
     else
     {//print the version name

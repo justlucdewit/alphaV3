@@ -115,9 +115,28 @@ CMakeFiles\Alpha.dir\fragments\errorSys\errorSys.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Alpha.dir\fragments\errorSys\errorSys.cpp.s /c D:\programming\cpp\alphav3\fragments\errorSys\errorSys.cpp
 <<
 
+CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.obj: CMakeFiles\Alpha.dir\flags.make
+CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.obj: ..\fragments\tokenSplitter\tokenSplitter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programming\cpp\alphav3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Alpha.dir/fragments/tokenSplitter/tokenSplitter.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.obj /FdCMakeFiles\Alpha.dir\ /FS -c D:\programming\cpp\alphav3\fragments\tokenSplitter\tokenSplitter.cpp
+<<
+
+CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Alpha.dir/fragments/tokenSplitter/tokenSplitter.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\cpp\alphav3\fragments\tokenSplitter\tokenSplitter.cpp
+<<
+
+CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Alpha.dir/fragments/tokenSplitter/tokenSplitter.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.s /c D:\programming\cpp\alphav3\fragments\tokenSplitter\tokenSplitter.cpp
+<<
+
 CMakeFiles\Alpha.dir\fragments\tokenSys\tokenSys.cpp.obj: CMakeFiles\Alpha.dir\flags.make
 CMakeFiles\Alpha.dir\fragments\tokenSys\tokenSys.cpp.obj: ..\fragments\tokenSys\tokenSys.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programming\cpp\alphav3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Alpha.dir/fragments/tokenSys/tokenSys.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programming\cpp\alphav3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Alpha.dir/fragments/tokenSys/tokenSys.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Alpha.dir\fragments\tokenSys\tokenSys.cpp.obj /FdCMakeFiles\Alpha.dir\ /FS -c D:\programming\cpp\alphav3\fragments\tokenSys\tokenSys.cpp
 <<
@@ -139,6 +158,7 @@ Alpha_OBJECTS = \
 "CMakeFiles\Alpha.dir\main.cpp.obj" \
 "CMakeFiles\Alpha.dir\fragments\fileReader\fileReader.cpp.obj" \
 "CMakeFiles\Alpha.dir\fragments\errorSys\errorSys.cpp.obj" \
+"CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.obj" \
 "CMakeFiles\Alpha.dir\fragments\tokenSys\tokenSys.cpp.obj"
 
 # External object files for target Alpha
@@ -147,10 +167,11 @@ Alpha_EXTERNAL_OBJECTS =
 Alpha.exe: CMakeFiles\Alpha.dir\main.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\fragments\fileReader\fileReader.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\fragments\errorSys\errorSys.cpp.obj
+Alpha.exe: CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\fragments\tokenSys\tokenSys.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\build.make
 Alpha.exe: CMakeFiles\Alpha.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\programming\cpp\alphav3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Alpha.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\programming\cpp\alphav3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Alpha.exe"
 	"C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\Alpha.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\Alpha.dir\objects1.rsp @<<
  /out:Alpha.exe /implib:Alpha.lib /pdb:D:\programming\cpp\alphav3\cmake-build-debug\Alpha.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

@@ -8,3 +8,11 @@
 	this fragment takes a number representing the error code
 	and will then display that error, and end the execution
 	with code 1
+
+-tokenSystem
+    this fragment includes a struct and a enum responsible
+    for storing the tokens, that are split up by the tokenSplitter
+
+-tokenSplitter
+    the tokenSplitter fragment's job is to take the string gained from
+    the fileReader, and store them in tokens defined by the tokenSystem

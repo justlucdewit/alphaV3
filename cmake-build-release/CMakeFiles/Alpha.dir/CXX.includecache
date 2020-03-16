@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.cpp
+tokenSplitter.hpp
+D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.hpp
+
+D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.hpp
+vector
+-
+string
+-
+../tokenSys/tokenSys.hpp
+D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.hpp
+
+D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.hpp
+

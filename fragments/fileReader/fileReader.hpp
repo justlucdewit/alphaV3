@@ -1,2 +1,2 @@
 #pragma once
-std::string fileReader(std::string);
+const char* fileReader(char*);

@@ -11,8 +11,9 @@
 
 	it will throw an error if the file cant be opened for any reason
 */
-std::string fileReader(std::string path)
+const char* fileReader(char* filepath)
 {
+    std::string path = std::string(filepath);
 	std::ifstream ifs(path);
 
     if (!ifs.is_open())
@@ -28,5 +29,5 @@ std::string fileReader(std::string path)
     }
 
     std::string content((std::istreambuf_iterator<char>(ifs)),(std::istreambuf_iterator<char>()));
-    return content;
+    return content.c_str();
 }

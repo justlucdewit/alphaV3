@@ -94,10 +94,16 @@
 		<Unit filename="D:/programming/cpp/alphav3/fragments/fileReader/fileReader.hpp">
 			<Option target="Alpha"/>
 		</Unit>
+		<Unit filename="D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.cpp">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.hpp">
+			<Option target="Alpha"/>
+		</Unit>
 		<Unit filename="D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.cpp">
 			<Option target="Alpha"/>
 		</Unit>
-		<Unit filename="D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.h">
+		<Unit filename="D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.hpp">
 			<Option target="Alpha"/>
 		</Unit>
 		<Unit filename="D:/programming/cpp/alphav3/main.cpp">

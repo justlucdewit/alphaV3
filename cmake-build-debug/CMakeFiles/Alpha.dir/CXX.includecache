@@ -6,7 +6,13 @@
 
 #IncludeRegexTransform: 
 
-D:/programming/cpp/alphav3/fileReader.cpp
+D:/programming/cpp/alphav3/fragments/errorSys/errorSys.cpp
+iostream
+-
+
+D:/programming/cpp/alphav3/fragments/errorSys/errorSys.hpp
+
+D:/programming/cpp/alphav3/fragments/fileReader/fileReader.cpp
 iostream
 -
 fstream
@@ -14,23 +20,37 @@ fstream
 string
 -
 fileReader.hpp
-D:/programming/cpp/alphav3/fileReader.hpp
-throwError.hpp
-D:/programming/cpp/alphav3/throwError.hpp
+D:/programming/cpp/alphav3/fragments/fileReader/fileReader.hpp
+../errorSys/errorSys.hpp
+D:/programming/cpp/alphav3/fragments/errorSys/errorSys.hpp
 
-D:/programming/cpp/alphav3/fileReader.hpp
+D:/programming/cpp/alphav3/fragments/fileReader/fileReader.hpp
+
+D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.cpp
+tokenSplitter.hpp
+D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.hpp
+
+D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.hpp
+vector
+-
+string
+-
+../tokenSys/tokenSys.hpp
+D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.hpp
+
+D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.hpp
 
 D:/programming/cpp/alphav3/main.cpp
 iostream
 -
+vector
+-
 string
 -
-fileReader.hpp
-D:/programming/cpp/alphav3/fileReader.hpp
-
-D:/programming/cpp/alphav3/throwError.cpp
-iostream
--
-
-D:/programming/cpp/alphav3/throwError.hpp
+fragments/tokenSplitter/tokenSplitter.hpp
+D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.hpp
+fragments/fileReader/fileReader.hpp
+D:/programming/cpp/alphav3/fragments/fileReader/fileReader.hpp
+fragments/tokenSys/tokenSys.hpp
+D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.hpp
 

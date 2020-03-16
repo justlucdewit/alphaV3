@@ -178,6 +178,33 @@ fragments\fileReader\fileReader.cpp.s:
 	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\fileReader\fileReader.cpp.s
 .PHONY : fragments\fileReader\fileReader.cpp.s
 
+fragments\tokenSplitter\tokenSplitter.obj: fragments\tokenSplitter\tokenSplitter.cpp.obj
+
+.PHONY : fragments\tokenSplitter\tokenSplitter.obj
+
+# target to build an object file
+fragments\tokenSplitter\tokenSplitter.cpp.obj:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.obj
+.PHONY : fragments\tokenSplitter\tokenSplitter.cpp.obj
+
+fragments\tokenSplitter\tokenSplitter.i: fragments\tokenSplitter\tokenSplitter.cpp.i
+
+.PHONY : fragments\tokenSplitter\tokenSplitter.i
+
+# target to preprocess a source file
+fragments\tokenSplitter\tokenSplitter.cpp.i:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.i
+.PHONY : fragments\tokenSplitter\tokenSplitter.cpp.i
+
+fragments\tokenSplitter\tokenSplitter.s: fragments\tokenSplitter\tokenSplitter.cpp.s
+
+.PHONY : fragments\tokenSplitter\tokenSplitter.s
+
+# target to generate assembly for a file
+fragments\tokenSplitter\tokenSplitter.cpp.s:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.s
+.PHONY : fragments\tokenSplitter\tokenSplitter.cpp.s
+
 fragments\tokenSys\tokenSys.obj: fragments\tokenSys\tokenSys.cpp.obj
 
 .PHONY : fragments\tokenSys\tokenSys.obj
@@ -247,6 +274,9 @@ help:
 	@echo ... fragments/fileReader/fileReader.obj
 	@echo ... fragments/fileReader/fileReader.i
 	@echo ... fragments/fileReader/fileReader.s
+	@echo ... fragments/tokenSplitter/tokenSplitter.obj
+	@echo ... fragments/tokenSplitter/tokenSplitter.i
+	@echo ... fragments/tokenSplitter/tokenSplitter.s
 	@echo ... fragments/tokenSys/tokenSys.obj
 	@echo ... fragments/tokenSys/tokenSys.i
 	@echo ... fragments/tokenSys/tokenSys.s

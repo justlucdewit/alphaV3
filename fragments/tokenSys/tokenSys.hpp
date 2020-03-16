@@ -25,3 +25,6 @@ typedef struct Token
     char* value;
     TokenType type;
 }Token;
+
+void printToken(Token);
+char* typeToString(TokenType);
