@@ -6,26 +6,6 @@
 
 #IncludeRegexTransform: 
 
-D:/programming/cpp/alphav3/fragments/errorSys/errorSys.cpp
-iostream
--
-
-D:/programming/cpp/alphav3/fragments/errorSys/errorSys.hpp
-
-D:/programming/cpp/alphav3/fragments/fileReader/fileReader.cpp
-iostream
--
-fstream
--
-string
--
-fileReader.hpp
-D:/programming/cpp/alphav3/fragments/fileReader/fileReader.hpp
-../errorSys/errorSys.hpp
-D:/programming/cpp/alphav3/fragments/errorSys/errorSys.hpp
-
-D:/programming/cpp/alphav3/fragments/fileReader/fileReader.hpp
-
 D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.cpp
 tokenSplitter.hpp
 D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.hpp
@@ -38,19 +18,5 @@ string
 ../tokenSys/tokenSys.hpp
 D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.hpp
 
-D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.hpp
-
-D:/programming/cpp/alphav3/main.cpp
-iostream
--
-vector
--
-string
--
-fragments/tokenSplitter/tokenSplitter.hpp
-D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.hpp
-fragments/fileReader/fileReader.hpp
-D:/programming/cpp/alphav3/fragments/fileReader/fileReader.hpp
-fragments/tokenSys/tokenSys.hpp
 D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.hpp
 

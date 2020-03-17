@@ -4,6 +4,7 @@
 
 #include "fileReader.hpp"
 #include "../errorSys/errorSys.hpp"
+
 /*
 	the fileReader is a very simple engine fragment. that is
 	able to open a file, given its path. and return its content
@@ -11,7 +12,7 @@
 
 	it will throw an error if the file cant be opened for any reason
 */
-const char* fileReader(char* filepath)
+std::string fileReader(char* filepath)
 {
     std::string path = std::string(filepath);
 	std::ifstream ifs(path);
@@ -29,5 +30,6 @@ const char* fileReader(char* filepath)
     }
 
     std::string content((std::istreambuf_iterator<char>(ifs)),(std::istreambuf_iterator<char>()));
-    return content.c_str();
+
+    return content;
 }

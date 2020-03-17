@@ -11,6 +11,9 @@ CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.obj: ..\fragments
 CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.obj: ..\fragments\tokenSplitter\tokenSplitter.hpp
 CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.obj: ..\fragments\tokenSys\tokenSys.hpp
 
+CMakeFiles\Alpha.dir\fragments\tokenSys\tokenSys.cpp.obj: ..\fragments\tokenSys\tokenSys.cpp
+CMakeFiles\Alpha.dir\fragments\tokenSys\tokenSys.cpp.obj: ..\fragments\tokenSys\tokenSys.hpp
+
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\fragments\fileReader\fileReader.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\fragments\tokenSplitter\tokenSplitter.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\fragments\tokenSys\tokenSys.hpp

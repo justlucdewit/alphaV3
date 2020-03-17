@@ -26,15 +26,19 @@ int main(int argc, char** argv)
 	{//assume the argument is a file name to be ran
 
         //extract the source code from the file
-		const char* sourceCode = fileReader(argv[1]);
+		std::string sourceCode = fileReader(argv[1]);
 
 		//split the source code into tokens according to spaces and strings
         std::vector<Token> tokens = tokenSplitter(sourceCode);
 
-		for (int i = 0; i <= tokens.size(); i++)
+
+        //go over every token and print it to console
+		for (int i = 0; i < tokens.size(); i++)
 		{
+		    std::cout << i+1 << " ";
             printToken(tokens[i]);
 		}
+		std::cout << "end";
     }
     else
     {//print the version name

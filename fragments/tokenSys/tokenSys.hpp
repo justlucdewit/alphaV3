@@ -16,15 +16,17 @@ typedef enum TokenType : unsigned char
 }TokenType;
 
 /*
- * Token is a typed struct, that stores all of the value type pairs
+ * Token is a struct, that stores all of the value type pairs
  * that the token splitter produces, that list of tokens will then
  * be passed to the interpreter which then runs the code
  */
-typedef struct Token
+struct Token
 {
-    char* value;
+    std::string value;
     TokenType type;
-}Token;
+    Token();
+    Token(std::string);
+};
 
 void printToken(Token);
 char* typeToString(TokenType);
