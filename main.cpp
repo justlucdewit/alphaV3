@@ -31,7 +31,6 @@ int main(int argc, char** argv)
 		//split the source code into tokens according to spaces and strings
         std::vector<Token> tokens = tokenSplitter(sourceCode);
 
-
         //go over every token and print it to console
 		for (int i = 0; i < tokens.size(); i++)
 		{

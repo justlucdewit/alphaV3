@@ -7,25 +7,38 @@ std::vector<Token> tokenSplitter(std::string sourceCode)
      * a character can be considered empty, and can thereby split a word
      */
 
-
     auto CharIsEmpty = [](const char c) -> bool
     {
         return c==' '||c=='\t'||c=='\n';
     };
 
-
     std::vector<Token> tokens;
     std::string tempstring;
     char stringMode = 0;
+    char lastChar;
 
-    for (int i = 0; i<sourceCode.size(); i++)
+    for (unsigned int i = 0; i<sourceCode.size(); i++)
     {
         const char c = sourceCode[i];
 
-        if (stringMode){
-
-        }else {
-            if (CharIsEmpty(c)) {
+        if (stringMode == 2){
+            if (c == '"' && lastChar != '\\'){
+                stringMode = 0;
+            }
+            tempstring += c;
+        }else if(stringMode == 1){
+            if (c == '\'' && lastChar != '\\'){
+                stringMode = 0;
+            }
+            tempstring += c;
+        }else{
+            if (c == '"'){
+                stringMode = 2;
+                tempstring += c;
+            }else if (c == '\''){
+                stringMode = 1;
+                tempstring += c;
+            }else if (CharIsEmpty(c)) {
                 if (!tempstring.empty() && !stringMode) {
                     tokens.push_back(Token(tempstring));
                     tempstring = "";
@@ -34,6 +47,8 @@ std::vector<Token> tokenSplitter(std::string sourceCode)
                 tempstring += c;
             }
         }
+
+        lastChar = c;
     }
 
     if (!tempstring.empty()){
