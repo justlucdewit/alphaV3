@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "Alpha.exe.manifest"
   "Alpha.lib"
   "Alpha.pdb"
+  "CMakeFiles/Alpha.dir/fragments/configLoader/configLoader.cpp.obj"
   "CMakeFiles/Alpha.dir/fragments/errorSys/errorSys.cpp.obj"
   "CMakeFiles/Alpha.dir/fragments/fileReader/fileReader.cpp.obj"
   "CMakeFiles/Alpha.dir/fragments/tokenSplitter/tokenSplitter.cpp.obj"

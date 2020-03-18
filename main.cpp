@@ -5,6 +5,7 @@
 #include "fragments/tokenSplitter/tokenSplitter.hpp"
 #include "fragments/fileReader/fileReader.hpp"
 #include "fragments/tokenSys/tokenSys.hpp"
+#include "fragments/configLoader/configLoader.h"
 
 /*
 	alpha is the interpreter CLI for the alphacode language
@@ -25,6 +26,9 @@ int main(int argc, char** argv)
     if (argc >= 2)
 	{//assume the argument is a file name to be ran
 
+        //extract config data from acconfig.json
+        loadConfig(argv[1]);
+
         //extract the source code from the file
 		std::string sourceCode = fileReader(argv[1]);
 
@@ -32,12 +36,12 @@ int main(int argc, char** argv)
         std::vector<Token> tokens = tokenSplitter(sourceCode);
 
         //go over every token and print it to console
-		for (int i = 0; i < tokens.size(); i++)
+		for (unsigned int i = 0; i < tokens.size(); i++)
 		{
-		    std::cout << i+1 << " ";
-            printToken(tokens[i]);
+		    //std::cout << i+1 << " ";
+            //printToken(tokens[i]);
 		}
-		std::cout << "end";
+		std::cout << "\nend";
     }
     else
     {//print the version name

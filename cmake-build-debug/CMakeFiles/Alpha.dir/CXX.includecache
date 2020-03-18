@@ -6,9 +6,17 @@
 
 #IncludeRegexTransform: 
 
-D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.cpp
-tokenSplitter.hpp
-D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.hpp
+D:/programming/cpp/alphav3/fragments/configLoader/configLoader.cpp
+configLoader.h
+D:/programming/cpp/alphav3/fragments/configLoader/configLoader.h
+
+D:/programming/cpp/alphav3/fragments/configLoader/configLoader.h
+iostream
+-
+string
+-
+
+D:/programming/cpp/alphav3/fragments/fileReader/fileReader.hpp
 
 D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.hpp
 vector
@@ -19,4 +27,20 @@ string
 D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.hpp
 
 D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.hpp
+
+D:/programming/cpp/alphav3/main.cpp
+iostream
+-
+vector
+-
+string
+-
+fragments/tokenSplitter/tokenSplitter.hpp
+D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.hpp
+fragments/fileReader/fileReader.hpp
+D:/programming/cpp/alphav3/fragments/fileReader/fileReader.hpp
+fragments/tokenSys/tokenSys.hpp
+D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.hpp
+fragments/configLoader/configLoader.h
+D:/programming/cpp/alphav3/fragments/configLoader/configLoader.h
 

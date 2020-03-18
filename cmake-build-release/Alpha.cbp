@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/programming/cpp/alphav3/fragments/configLoader/configLoader.cpp">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="D:/programming/cpp/alphav3/fragments/configLoader/configLoader.h">
+			<Option target="Alpha"/>
+		</Unit>
 		<Unit filename="D:/programming/cpp/alphav3/fragments/errorSys/errorSys.cpp">
 			<Option target="Alpha"/>
 		</Unit>

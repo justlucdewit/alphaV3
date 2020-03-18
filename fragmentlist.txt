@@ -1,5 +1,5 @@
 -fileReader
-	this frament takes a string representing a file location
+	this fragment takes a string representing a file location
 	it will then open that file, throw and error if it 
 	doesnt want to open and return the content of the file
 	if it does want to open
@@ -16,3 +16,16 @@
 -tokenSplitter
     the tokenSplitter fragment's job is to take the string gained from
     the fileReader, and store them in tokens defined by the tokenSystem
+
+-configLoader
+    this fragment is responsible for loading the command data from the
+    acconfig.json file. so it can be used in the typeChecker
+
+-typeChecker
+    this will go over all the tokens that have been found in the source file
+    and will then find out and set the type of each token
+
+-validator
+    this will go over all the correctly typed tokens, and see if there have been
+    made any mistakes with the amount of arguments needed, and the type of those
+    arguments

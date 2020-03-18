@@ -124,6 +124,33 @@ Alpha\fast:
 	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\build
 .PHONY : Alpha\fast
 
+fragments\configLoader\configLoader.obj: fragments\configLoader\configLoader.cpp.obj
+
+.PHONY : fragments\configLoader\configLoader.obj
+
+# target to build an object file
+fragments\configLoader\configLoader.cpp.obj:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\configLoader\configLoader.cpp.obj
+.PHONY : fragments\configLoader\configLoader.cpp.obj
+
+fragments\configLoader\configLoader.i: fragments\configLoader\configLoader.cpp.i
+
+.PHONY : fragments\configLoader\configLoader.i
+
+# target to preprocess a source file
+fragments\configLoader\configLoader.cpp.i:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\configLoader\configLoader.cpp.i
+.PHONY : fragments\configLoader\configLoader.cpp.i
+
+fragments\configLoader\configLoader.s: fragments\configLoader\configLoader.cpp.s
+
+.PHONY : fragments\configLoader\configLoader.s
+
+# target to generate assembly for a file
+fragments\configLoader\configLoader.cpp.s:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\configLoader\configLoader.cpp.s
+.PHONY : fragments\configLoader\configLoader.cpp.s
+
 fragments\errorSys\errorSys.obj: fragments\errorSys\errorSys.cpp.obj
 
 .PHONY : fragments\errorSys\errorSys.obj
@@ -268,6 +295,9 @@ help:
 	@echo ... Alpha
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... fragments/configLoader/configLoader.obj
+	@echo ... fragments/configLoader/configLoader.i
+	@echo ... fragments/configLoader/configLoader.s
 	@echo ... fragments/errorSys/errorSys.obj
 	@echo ... fragments/errorSys/errorSys.i
 	@echo ... fragments/errorSys/errorSys.s
