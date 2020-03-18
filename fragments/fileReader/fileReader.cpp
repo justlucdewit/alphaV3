@@ -12,7 +12,7 @@
 
 	it will throw an error if the file cant be opened for any reason
 */
-std::string fileReader(char* filepath)
+std::string fileReader(const char* filepath)
 {
     std::string path = std::string(filepath);
 	std::ifstream ifs(path);
