@@ -4,11 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/programming/cpp/alphav3/fragments/configLoader/configLoader.cpp" "D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/Alpha.dir/fragments/configLoader/configLoader.cpp.obj"
-  "D:/programming/cpp/alphav3/fragments/errorSys/errorSys.cpp" "D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/Alpha.dir/fragments/errorSys/errorSys.cpp.obj"
-  "D:/programming/cpp/alphav3/fragments/fileReader/fileReader.cpp" "D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/Alpha.dir/fragments/fileReader/fileReader.cpp.obj"
-  "D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.cpp" "D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/Alpha.dir/fragments/tokenSplitter/tokenSplitter.cpp.obj"
-  "D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.cpp" "D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/Alpha.dir/fragments/tokenSys/tokenSys.cpp.obj"
+  "D:/programming/cpp/alphav3/components/configLoader/configLoader.cpp" "D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/Alpha.dir/components/configLoader/configLoader.cpp.obj"
+  "D:/programming/cpp/alphav3/components/errorSys/errorSys.cpp" "D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/Alpha.dir/components/errorSys/errorSys.cpp.obj"
+  "D:/programming/cpp/alphav3/components/fileReader/fileReader.cpp" "D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/Alpha.dir/components/fileReader/fileReader.cpp.obj"
+  "D:/programming/cpp/alphav3/components/tokenSplitter/tokenSplitter.cpp" "D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/Alpha.dir/components/tokenSplitter/tokenSplitter.cpp.obj"
+  "D:/programming/cpp/alphav3/components/tokenSys/tokenSys.cpp" "D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/Alpha.dir/components/tokenSys/tokenSys.cpp.obj"
+  "D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.cpp" "D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/Alpha.dir/components/typeIdentifier/typeIdentifier.cpp.obj"
   "D:/programming/cpp/alphav3/main.cpp" "D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/Alpha.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")

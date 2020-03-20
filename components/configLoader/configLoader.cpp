@@ -1,4 +1,4 @@
-#include "configLoader.h"
+#include "configLoader.hpp"
 
 #include "../fileReader/fileReader.hpp"
 #include "../../headers/json.h"

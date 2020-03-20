@@ -82,34 +82,43 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/programming/cpp/alphav3/fragments/configLoader/configLoader.cpp">
+		<Unit filename="D:/programming/cpp/alphav3/components/configLoader/configLoader.cpp">
 			<Option target="Alpha"/>
 		</Unit>
-		<Unit filename="D:/programming/cpp/alphav3/fragments/configLoader/configLoader.h">
+		<Unit filename="D:/programming/cpp/alphav3/components/configLoader/configLoader.h">
 			<Option target="Alpha"/>
 		</Unit>
-		<Unit filename="D:/programming/cpp/alphav3/fragments/errorSys/errorSys.cpp">
+		<Unit filename="D:/programming/cpp/alphav3/components/errorSys/errorSys.cpp">
 			<Option target="Alpha"/>
 		</Unit>
-		<Unit filename="D:/programming/cpp/alphav3/fragments/errorSys/errorSys.hpp">
+		<Unit filename="D:/programming/cpp/alphav3/components/errorSys/errorSys.hpp">
 			<Option target="Alpha"/>
 		</Unit>
-		<Unit filename="D:/programming/cpp/alphav3/fragments/fileReader/fileReader.cpp">
+		<Unit filename="D:/programming/cpp/alphav3/components/fileReader/fileReader.cpp">
 			<Option target="Alpha"/>
 		</Unit>
-		<Unit filename="D:/programming/cpp/alphav3/fragments/fileReader/fileReader.hpp">
+		<Unit filename="D:/programming/cpp/alphav3/components/fileReader/fileReader.hpp">
 			<Option target="Alpha"/>
 		</Unit>
-		<Unit filename="D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.cpp">
+		<Unit filename="D:/programming/cpp/alphav3/components/tokenSplitter/tokenSplitter.cpp">
 			<Option target="Alpha"/>
 		</Unit>
-		<Unit filename="D:/programming/cpp/alphav3/fragments/tokenSplitter/tokenSplitter.hpp">
+		<Unit filename="D:/programming/cpp/alphav3/components/tokenSplitter/tokenSplitter.hpp">
 			<Option target="Alpha"/>
 		</Unit>
-		<Unit filename="D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.cpp">
+		<Unit filename="D:/programming/cpp/alphav3/components/tokenSys/tokenSys.cpp">
 			<Option target="Alpha"/>
 		</Unit>
-		<Unit filename="D:/programming/cpp/alphav3/fragments/tokenSys/tokenSys.hpp">
+		<Unit filename="D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.cpp">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.h">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="D:/programming/cpp/alphav3/headers/json.h">
 			<Option target="Alpha"/>
 		</Unit>
 		<Unit filename="D:/programming/cpp/alphav3/main.cpp">

@@ -1,3 +1,3 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(Alpha)
-add_executable(${PROJECT_NAME} main.cpp fragments/fileReader/fileReader.cpp fragments/errorSys/errorSys.cpp fragments/tokenSys/tokenSys.hpp fragments/tokenSplitter/tokenSplitter.cpp fragments/tokenSplitter/tokenSplitter.hpp fragments/tokenSys/tokenSys.cpp fragments/configLoader/configLoader.cpp fragments/configLoader/configLoader.h headers/json.h)
+add_executable(${PROJECT_NAME} main.cpp components/fileReader/fileReader.cpp components/errorSys/errorSys.cpp components/tokenSys/tokenSys.hpp components/tokenSplitter/tokenSplitter.cpp components/tokenSplitter/tokenSplitter.hpp components/tokenSys/tokenSys.cpp components/configLoader/configLoader.cpp components/configLoader/configLoader.hpp headers/json.h components/typeIdentifier/typeIdentifier.cpp components/typeIdentifier/typeIdentifier.hpp)

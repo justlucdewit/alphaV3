@@ -1,11 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <map>
 
-#include "fragments/tokenSplitter/tokenSplitter.hpp"
-#include "fragments/fileReader/fileReader.hpp"
-#include "fragments/tokenSys/tokenSys.hpp"
-#include "fragments/configLoader/configLoader.h"
+#include "components/tokenSplitter/tokenSplitter.hpp"
+#include "components/fileReader/fileReader.hpp"
+#include "components/tokenSys/tokenSys.hpp"
+#include "components/configLoader/configLoader.hpp"
+#include "components/typeIdentifier/typeIdentifier.hpp"
 
 /*
 	alpha is the interpreter CLI for the alphacode language
@@ -25,9 +27,11 @@ int main(int argc, char** argv)
 {
     if (argc >= 2)
 	{//assume the argument is a file name to be ran
+        std::vector<std::string> commands;// list of commands available
+        std::map<std::string, std::vector<std::vector<TokenType>>> argData;// list of arguments used by commands
 
         //extract config data from acconfig.json
-        loadConfig(argv[1]);
+        loadConfig(argv[1], commands, argData);
 
         //extract the source code from the file
 		std::string sourceCode = fileReader(argv[1]);
@@ -35,11 +39,14 @@ int main(int argc, char** argv)
 		//split the source code into tokens according to spaces and strings
         std::vector<Token> tokens = tokenSplitter(sourceCode);
 
+        //read the tokens and assign a type
+        typeIdentifier(tokens);
+
         //go over every token and print it to console
 		for (unsigned int i = 0; i < tokens.size(); i++)
 		{
-		    //std::cout << i+1 << " ";
-            //printToken(tokens[i]);
+		    std::cout << i+1 << " ";
+            printToken(tokens[i]);
 		}
 		std::cout << "\nend";
     }

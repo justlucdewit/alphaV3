@@ -124,140 +124,167 @@ Alpha\fast:
 	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\build
 .PHONY : Alpha\fast
 
-fragments\configLoader\configLoader.obj: fragments\configLoader\configLoader.cpp.obj
+components\configLoader\configLoader.obj: components\configLoader\configLoader.cpp.obj
 
-.PHONY : fragments\configLoader\configLoader.obj
-
-# target to build an object file
-fragments\configLoader\configLoader.cpp.obj:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\configLoader\configLoader.cpp.obj
-.PHONY : fragments\configLoader\configLoader.cpp.obj
-
-fragments\configLoader\configLoader.i: fragments\configLoader\configLoader.cpp.i
-
-.PHONY : fragments\configLoader\configLoader.i
-
-# target to preprocess a source file
-fragments\configLoader\configLoader.cpp.i:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\configLoader\configLoader.cpp.i
-.PHONY : fragments\configLoader\configLoader.cpp.i
-
-fragments\configLoader\configLoader.s: fragments\configLoader\configLoader.cpp.s
-
-.PHONY : fragments\configLoader\configLoader.s
-
-# target to generate assembly for a file
-fragments\configLoader\configLoader.cpp.s:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\configLoader\configLoader.cpp.s
-.PHONY : fragments\configLoader\configLoader.cpp.s
-
-fragments\errorSys\errorSys.obj: fragments\errorSys\errorSys.cpp.obj
-
-.PHONY : fragments\errorSys\errorSys.obj
+.PHONY : components\configLoader\configLoader.obj
 
 # target to build an object file
-fragments\errorSys\errorSys.cpp.obj:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\errorSys\errorSys.cpp.obj
-.PHONY : fragments\errorSys\errorSys.cpp.obj
+components\configLoader\configLoader.cpp.obj:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.obj
+.PHONY : components\configLoader\configLoader.cpp.obj
 
-fragments\errorSys\errorSys.i: fragments\errorSys\errorSys.cpp.i
+components\configLoader\configLoader.i: components\configLoader\configLoader.cpp.i
 
-.PHONY : fragments\errorSys\errorSys.i
+.PHONY : components\configLoader\configLoader.i
 
 # target to preprocess a source file
-fragments\errorSys\errorSys.cpp.i:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\errorSys\errorSys.cpp.i
-.PHONY : fragments\errorSys\errorSys.cpp.i
+components\configLoader\configLoader.cpp.i:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.i
+.PHONY : components\configLoader\configLoader.cpp.i
 
-fragments\errorSys\errorSys.s: fragments\errorSys\errorSys.cpp.s
+components\configLoader\configLoader.s: components\configLoader\configLoader.cpp.s
 
-.PHONY : fragments\errorSys\errorSys.s
+.PHONY : components\configLoader\configLoader.s
 
 # target to generate assembly for a file
-fragments\errorSys\errorSys.cpp.s:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\errorSys\errorSys.cpp.s
-.PHONY : fragments\errorSys\errorSys.cpp.s
+components\configLoader\configLoader.cpp.s:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.s
+.PHONY : components\configLoader\configLoader.cpp.s
 
-fragments\fileReader\fileReader.obj: fragments\fileReader\fileReader.cpp.obj
+components\errorSys\errorSys.obj: components\errorSys\errorSys.cpp.obj
 
-.PHONY : fragments\fileReader\fileReader.obj
+.PHONY : components\errorSys\errorSys.obj
 
 # target to build an object file
-fragments\fileReader\fileReader.cpp.obj:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\fileReader\fileReader.cpp.obj
-.PHONY : fragments\fileReader\fileReader.cpp.obj
+components\errorSys\errorSys.cpp.obj:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\errorSys\errorSys.cpp.obj
+.PHONY : components\errorSys\errorSys.cpp.obj
 
-fragments\fileReader\fileReader.i: fragments\fileReader\fileReader.cpp.i
+components\errorSys\errorSys.i: components\errorSys\errorSys.cpp.i
 
-.PHONY : fragments\fileReader\fileReader.i
+.PHONY : components\errorSys\errorSys.i
 
 # target to preprocess a source file
-fragments\fileReader\fileReader.cpp.i:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\fileReader\fileReader.cpp.i
-.PHONY : fragments\fileReader\fileReader.cpp.i
+components\errorSys\errorSys.cpp.i:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\errorSys\errorSys.cpp.i
+.PHONY : components\errorSys\errorSys.cpp.i
 
-fragments\fileReader\fileReader.s: fragments\fileReader\fileReader.cpp.s
+components\errorSys\errorSys.s: components\errorSys\errorSys.cpp.s
 
-.PHONY : fragments\fileReader\fileReader.s
+.PHONY : components\errorSys\errorSys.s
 
 # target to generate assembly for a file
-fragments\fileReader\fileReader.cpp.s:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\fileReader\fileReader.cpp.s
-.PHONY : fragments\fileReader\fileReader.cpp.s
+components\errorSys\errorSys.cpp.s:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\errorSys\errorSys.cpp.s
+.PHONY : components\errorSys\errorSys.cpp.s
 
-fragments\tokenSplitter\tokenSplitter.obj: fragments\tokenSplitter\tokenSplitter.cpp.obj
+components\fileReader\fileReader.obj: components\fileReader\fileReader.cpp.obj
 
-.PHONY : fragments\tokenSplitter\tokenSplitter.obj
+.PHONY : components\fileReader\fileReader.obj
 
 # target to build an object file
-fragments\tokenSplitter\tokenSplitter.cpp.obj:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.obj
-.PHONY : fragments\tokenSplitter\tokenSplitter.cpp.obj
+components\fileReader\fileReader.cpp.obj:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\fileReader\fileReader.cpp.obj
+.PHONY : components\fileReader\fileReader.cpp.obj
 
-fragments\tokenSplitter\tokenSplitter.i: fragments\tokenSplitter\tokenSplitter.cpp.i
+components\fileReader\fileReader.i: components\fileReader\fileReader.cpp.i
 
-.PHONY : fragments\tokenSplitter\tokenSplitter.i
+.PHONY : components\fileReader\fileReader.i
 
 # target to preprocess a source file
-fragments\tokenSplitter\tokenSplitter.cpp.i:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.i
-.PHONY : fragments\tokenSplitter\tokenSplitter.cpp.i
+components\fileReader\fileReader.cpp.i:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\fileReader\fileReader.cpp.i
+.PHONY : components\fileReader\fileReader.cpp.i
 
-fragments\tokenSplitter\tokenSplitter.s: fragments\tokenSplitter\tokenSplitter.cpp.s
+components\fileReader\fileReader.s: components\fileReader\fileReader.cpp.s
 
-.PHONY : fragments\tokenSplitter\tokenSplitter.s
+.PHONY : components\fileReader\fileReader.s
 
 # target to generate assembly for a file
-fragments\tokenSplitter\tokenSplitter.cpp.s:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\tokenSplitter\tokenSplitter.cpp.s
-.PHONY : fragments\tokenSplitter\tokenSplitter.cpp.s
+components\fileReader\fileReader.cpp.s:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\fileReader\fileReader.cpp.s
+.PHONY : components\fileReader\fileReader.cpp.s
 
-fragments\tokenSys\tokenSys.obj: fragments\tokenSys\tokenSys.cpp.obj
+components\tokenSplitter\tokenSplitter.obj: components\tokenSplitter\tokenSplitter.cpp.obj
 
-.PHONY : fragments\tokenSys\tokenSys.obj
+.PHONY : components\tokenSplitter\tokenSplitter.obj
 
 # target to build an object file
-fragments\tokenSys\tokenSys.cpp.obj:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\tokenSys\tokenSys.cpp.obj
-.PHONY : fragments\tokenSys\tokenSys.cpp.obj
+components\tokenSplitter\tokenSplitter.cpp.obj:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\tokenSplitter\tokenSplitter.cpp.obj
+.PHONY : components\tokenSplitter\tokenSplitter.cpp.obj
 
-fragments\tokenSys\tokenSys.i: fragments\tokenSys\tokenSys.cpp.i
+components\tokenSplitter\tokenSplitter.i: components\tokenSplitter\tokenSplitter.cpp.i
 
-.PHONY : fragments\tokenSys\tokenSys.i
+.PHONY : components\tokenSplitter\tokenSplitter.i
 
 # target to preprocess a source file
-fragments\tokenSys\tokenSys.cpp.i:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\tokenSys\tokenSys.cpp.i
-.PHONY : fragments\tokenSys\tokenSys.cpp.i
+components\tokenSplitter\tokenSplitter.cpp.i:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\tokenSplitter\tokenSplitter.cpp.i
+.PHONY : components\tokenSplitter\tokenSplitter.cpp.i
 
-fragments\tokenSys\tokenSys.s: fragments\tokenSys\tokenSys.cpp.s
+components\tokenSplitter\tokenSplitter.s: components\tokenSplitter\tokenSplitter.cpp.s
 
-.PHONY : fragments\tokenSys\tokenSys.s
+.PHONY : components\tokenSplitter\tokenSplitter.s
 
 # target to generate assembly for a file
-fragments\tokenSys\tokenSys.cpp.s:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\fragments\tokenSys\tokenSys.cpp.s
-.PHONY : fragments\tokenSys\tokenSys.cpp.s
+components\tokenSplitter\tokenSplitter.cpp.s:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\tokenSplitter\tokenSplitter.cpp.s
+.PHONY : components\tokenSplitter\tokenSplitter.cpp.s
+
+components\tokenSys\tokenSys.obj: components\tokenSys\tokenSys.cpp.obj
+
+.PHONY : components\tokenSys\tokenSys.obj
+
+# target to build an object file
+components\tokenSys\tokenSys.cpp.obj:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\tokenSys\tokenSys.cpp.obj
+.PHONY : components\tokenSys\tokenSys.cpp.obj
+
+components\tokenSys\tokenSys.i: components\tokenSys\tokenSys.cpp.i
+
+.PHONY : components\tokenSys\tokenSys.i
+
+# target to preprocess a source file
+components\tokenSys\tokenSys.cpp.i:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\tokenSys\tokenSys.cpp.i
+.PHONY : components\tokenSys\tokenSys.cpp.i
+
+components\tokenSys\tokenSys.s: components\tokenSys\tokenSys.cpp.s
+
+.PHONY : components\tokenSys\tokenSys.s
+
+# target to generate assembly for a file
+components\tokenSys\tokenSys.cpp.s:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\tokenSys\tokenSys.cpp.s
+.PHONY : components\tokenSys\tokenSys.cpp.s
+
+components\typeIdentifier\typeIdentifier.obj: components\typeIdentifier\typeIdentifier.cpp.obj
+
+.PHONY : components\typeIdentifier\typeIdentifier.obj
+
+# target to build an object file
+components\typeIdentifier\typeIdentifier.cpp.obj:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.obj
+.PHONY : components\typeIdentifier\typeIdentifier.cpp.obj
+
+components\typeIdentifier\typeIdentifier.i: components\typeIdentifier\typeIdentifier.cpp.i
+
+.PHONY : components\typeIdentifier\typeIdentifier.i
+
+# target to preprocess a source file
+components\typeIdentifier\typeIdentifier.cpp.i:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.i
+.PHONY : components\typeIdentifier\typeIdentifier.cpp.i
+
+components\typeIdentifier\typeIdentifier.s: components\typeIdentifier\typeIdentifier.cpp.s
+
+.PHONY : components\typeIdentifier\typeIdentifier.s
+
+# target to generate assembly for a file
+components\typeIdentifier\typeIdentifier.cpp.s:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.s
+.PHONY : components\typeIdentifier\typeIdentifier.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -295,21 +322,24 @@ help:
 	@echo ... Alpha
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... fragments/configLoader/configLoader.obj
-	@echo ... fragments/configLoader/configLoader.i
-	@echo ... fragments/configLoader/configLoader.s
-	@echo ... fragments/errorSys/errorSys.obj
-	@echo ... fragments/errorSys/errorSys.i
-	@echo ... fragments/errorSys/errorSys.s
-	@echo ... fragments/fileReader/fileReader.obj
-	@echo ... fragments/fileReader/fileReader.i
-	@echo ... fragments/fileReader/fileReader.s
-	@echo ... fragments/tokenSplitter/tokenSplitter.obj
-	@echo ... fragments/tokenSplitter/tokenSplitter.i
-	@echo ... fragments/tokenSplitter/tokenSplitter.s
-	@echo ... fragments/tokenSys/tokenSys.obj
-	@echo ... fragments/tokenSys/tokenSys.i
-	@echo ... fragments/tokenSys/tokenSys.s
+	@echo ... components/configLoader/configLoader.obj
+	@echo ... components/configLoader/configLoader.i
+	@echo ... components/configLoader/configLoader.s
+	@echo ... components/errorSys/errorSys.obj
+	@echo ... components/errorSys/errorSys.i
+	@echo ... components/errorSys/errorSys.s
+	@echo ... components/fileReader/fileReader.obj
+	@echo ... components/fileReader/fileReader.i
+	@echo ... components/fileReader/fileReader.s
+	@echo ... components/tokenSplitter/tokenSplitter.obj
+	@echo ... components/tokenSplitter/tokenSplitter.i
+	@echo ... components/tokenSplitter/tokenSplitter.s
+	@echo ... components/tokenSys/tokenSys.obj
+	@echo ... components/tokenSys/tokenSys.i
+	@echo ... components/tokenSys/tokenSys.s
+	@echo ... components/typeIdentifier/typeIdentifier.obj
+	@echo ... components/typeIdentifier/typeIdentifier.i
+	@echo ... components/typeIdentifier/typeIdentifier.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

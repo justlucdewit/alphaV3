@@ -1,0 +1,43 @@
+let cell1 " "
+let cell2 " "
+let cell3 " "
+let cell4 " "
+let cell5 " "
+let cell6 " "
+let cell7 " "
+let cell8 " "
+let cell9 " "
+let cell10 " "
+let cell11 " "
+let cell12 " "
+let cell13 " "
+let cell14 "#"
+
+:mainloop
+goto printstate
+:back1
+goto recalculate
+
+exit 0# functions
+
+:recalculate
+gotoifis cell14 "#" test2
+goto mainloop
+
+:printstate
+print cell1
+print cell2
+print cell3
+print cell4
+print cell5
+print cell6
+print cell7
+print cell8
+print cell9
+print cell10
+print cell11
+print cell12
+print cell13
+print cell14
+print "\n"
+goto back1
