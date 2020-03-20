@@ -85,7 +85,7 @@
 		<Unit filename="D:/programming/cpp/alphav3/components/configLoader/configLoader.cpp">
 			<Option target="Alpha"/>
 		</Unit>
-		<Unit filename="D:/programming/cpp/alphav3/components/configLoader/configLoader.h">
+		<Unit filename="D:/programming/cpp/alphav3/components/configLoader/configLoader.hpp">
 			<Option target="Alpha"/>
 		</Unit>
 		<Unit filename="D:/programming/cpp/alphav3/components/errorSys/errorSys.cpp">
@@ -115,7 +115,7 @@
 		<Unit filename="D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.cpp">
 			<Option target="Alpha"/>
 		</Unit>
-		<Unit filename="D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.h">
+		<Unit filename="D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.hpp">
 			<Option target="Alpha"/>
 		</Unit>
 		<Unit filename="D:/programming/cpp/alphav3/headers/json.h">
