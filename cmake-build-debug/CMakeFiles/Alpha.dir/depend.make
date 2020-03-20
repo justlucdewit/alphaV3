@@ -4,6 +4,7 @@
 CMakeFiles\Alpha.dir\fragments\configLoader\configLoader.cpp.obj: ..\fragments\configLoader\configLoader.cpp
 CMakeFiles\Alpha.dir\fragments\configLoader\configLoader.cpp.obj: ..\fragments\configLoader\configLoader.h
 CMakeFiles\Alpha.dir\fragments\configLoader\configLoader.cpp.obj: ..\fragments\fileReader\fileReader.hpp
+CMakeFiles\Alpha.dir\fragments\configLoader\configLoader.cpp.obj: ..\fragments\tokenSys\tokenSys.hpp
 CMakeFiles\Alpha.dir\fragments\configLoader\configLoader.cpp.obj: ..\headers\json.h
 
 CMakeFiles\Alpha.dir\fragments\errorSys\errorSys.cpp.obj: ..\fragments\errorSys\errorSys.cpp
