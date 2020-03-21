@@ -6,6 +6,4 @@
 
 #include "../tokenSys/tokenSys.hpp"
 
-
-
-void loadConfig(std::string, std::vector<std::string>&, std::map<std::string, std::vector<std::vector<TokenType>>>&);
+void loadConfig(std::string, std::map<std::string, std::vector<std::vector<TokenType>>>&);

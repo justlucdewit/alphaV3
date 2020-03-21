@@ -27,11 +27,10 @@ int main(int argc, char** argv)
 {
     if (argc >= 2)
 	{//assume the argument is a file name to be ran
-        std::vector<std::string> commands;// list of commands available
         std::map<std::string, std::vector<std::vector<TokenType>>> argData;// list of arguments used by commands
 
         //extract config data from acconfig.json
-        loadConfig(argv[1], commands, argData);
+        loadConfig(argv[1], argData);
 
         //extract the source code from the file
 		std::string sourceCode = fileReader(argv[1]);
@@ -40,7 +39,7 @@ int main(int argc, char** argv)
         std::vector<Token> tokens = tokenSplitter(sourceCode);
 
         //read the tokens and assign a type
-        typeIdentifier(tokens);
+        typeIdentifier(tokens, argData);
 
         //go over every token and print it to console
 		for (unsigned int i = 0; i < tokens.size(); i++)

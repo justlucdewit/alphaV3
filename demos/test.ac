@@ -1,3 +1,3 @@
-let str "hello world\n"
-print str
-exit 0
+let str "hello world\n" #make string variable
+print str #print string variable
+exit 0 #exit the program

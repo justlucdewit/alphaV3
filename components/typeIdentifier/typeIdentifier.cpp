@@ -26,11 +26,45 @@ bool isNumber(std::string s)
     return char_pos == s.size();  // must reach the ending 0 of the string
 }
 
-void typeIdentifier(std::vector<Token>& tokens){
-    for (auto& t : tokens){
+bool isMarker(std::string s)
+{
+    return s.front() == ':';
+}
+
+bool isString(std::string s)
+{
+    return (s.front() == '\'' && s.back() == '\'') || (s.front() == '"' && s.back() == '"');
+}
+
+bool isCommand(std::string s, std::map<std::string, std::vector<std::vector<TokenType>>> commands)
+{
+    return commands.find(s) != commands.end();
+}
+
+void typeIdentifier(std::vector<Token>& tokens, std::map<std::string, std::vector<std::vector<TokenType>>> commands)
+{
+    for (auto& t : tokens)
+    {
         t.type = alph_variable;
-        if (isNumber(t.value)){
+
+        if (isNumber(t.value))
+        {
             t.type = alph_number;
+        }
+
+        else if(isMarker(t.value))
+        {
+            t.type = alph_marker;
+        }
+
+        else if(isString(t.value))
+        {
+            t.type = alph_string;
+        }
+
+        else if(isCommand(t.value, commands))
+        {
+            t.type = alph_command;
         }
     }
 }

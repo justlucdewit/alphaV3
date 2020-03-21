@@ -14,6 +14,7 @@ std::vector<Token> tokenSplitter(std::string sourceCode)
 
     std::vector<Token> tokens;
     std::string tempstring;
+    bool commentMode = false;
     char stringMode = 0;
     char lastChar;
 
@@ -32,19 +33,31 @@ std::vector<Token> tokenSplitter(std::string sourceCode)
             }
             tempstring += c;
         }else{
-            if (c == '"'){
-                stringMode = 2;
-                tempstring += c;
-            }else if (c == '\''){
-                stringMode = 1;
-                tempstring += c;
-            }else if (CharIsEmpty(c)) {
-                if (!tempstring.empty() && !stringMode) {
-                    tokens.push_back(Token(tempstring));
-                    tempstring = "";
+
+            if (commentMode){
+                if (c == '\n'){
+                    commentMode = false;
                 }
-            } else {
-                tempstring += c;
+            }else {
+                if (c == '#') {
+                    commentMode = true;
+                    continue;
+                }
+
+                if (c == '"') {
+                    stringMode = 2;
+                    tempstring += c;
+                } else if (c == '\'') {
+                    stringMode = 1;
+                    tempstring += c;
+                } else if (CharIsEmpty(c)) {
+                    if (!tempstring.empty() && !stringMode) {
+                        tokens.push_back(Token(tempstring));
+                        tempstring = "";
+                    }
+                } else {
+                    tempstring += c;
+                }
             }
         }
 
