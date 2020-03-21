@@ -103,7 +103,7 @@
 		<Unit filename="D:/programming/cpp/alphav3/components/markerExtracter/markerExtracter.cpp">
 			<Option target="Alpha"/>
 		</Unit>
-		<Unit filename="D:/programming/cpp/alphav3/components/markerExtracter/markerExtracter.h">
+		<Unit filename="D:/programming/cpp/alphav3/components/markerExtracter/markerExtracter.hpp">
 			<Option target="Alpha"/>
 		</Unit>
 		<Unit filename="D:/programming/cpp/alphav3/components/tokenSplitter/tokenSplitter.cpp">
@@ -122,6 +122,12 @@
 			<Option target="Alpha"/>
 		</Unit>
 		<Unit filename="D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.hpp">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="D:/programming/cpp/alphav3/components/validator/validator.cpp">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="D:/programming/cpp/alphav3/components/validator/validator.h">
 			<Option target="Alpha"/>
 		</Unit>
 		<Unit filename="D:/programming/cpp/alphav3/headers/json.h">

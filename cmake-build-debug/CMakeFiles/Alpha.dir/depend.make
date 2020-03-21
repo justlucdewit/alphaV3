@@ -28,11 +28,16 @@ CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.obj: ..\compon
 CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.obj: ..\components\typeIdentifier\typeIdentifier.cpp
 CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.obj: ..\components\typeIdentifier\typeIdentifier.hpp
 
+CMakeFiles\Alpha.dir\components\validator\validator.cpp.obj: ..\components\tokenSys\tokenSys.hpp
+CMakeFiles\Alpha.dir\components\validator\validator.cpp.obj: ..\components\validator\validator.cpp
+CMakeFiles\Alpha.dir\components\validator\validator.cpp.obj: ..\components\validator\validator.hpp
+
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\configLoader\configLoader.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\fileReader\fileReader.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\markerExtracter\markerExtracter.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\tokenSplitter\tokenSplitter.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\tokenSys\tokenSys.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\typeIdentifier\typeIdentifier.hpp
+CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\validator\validator.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\main.cpp
 

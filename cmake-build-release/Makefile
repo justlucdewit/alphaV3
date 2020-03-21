@@ -313,6 +313,33 @@ components\typeIdentifier\typeIdentifier.cpp.s:
 	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.s
 .PHONY : components\typeIdentifier\typeIdentifier.cpp.s
 
+components\validator\validator.obj: components\validator\validator.cpp.obj
+
+.PHONY : components\validator\validator.obj
+
+# target to build an object file
+components\validator\validator.cpp.obj:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\validator\validator.cpp.obj
+.PHONY : components\validator\validator.cpp.obj
+
+components\validator\validator.i: components\validator\validator.cpp.i
+
+.PHONY : components\validator\validator.i
+
+# target to preprocess a source file
+components\validator\validator.cpp.i:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\validator\validator.cpp.i
+.PHONY : components\validator\validator.cpp.i
+
+components\validator\validator.s: components\validator\validator.cpp.s
+
+.PHONY : components\validator\validator.s
+
+# target to generate assembly for a file
+components\validator\validator.cpp.s:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\validator\validator.cpp.s
+.PHONY : components\validator\validator.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -370,6 +397,9 @@ help:
 	@echo ... components/typeIdentifier/typeIdentifier.obj
 	@echo ... components/typeIdentifier/typeIdentifier.i
 	@echo ... components/typeIdentifier/typeIdentifier.s
+	@echo ... components/validator/validator.obj
+	@echo ... components/validator/validator.i
+	@echo ... components/validator/validator.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

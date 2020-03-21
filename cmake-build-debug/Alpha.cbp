@@ -124,6 +124,12 @@
 		<Unit filename="D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.hpp">
 			<Option target="Alpha"/>
 		</Unit>
+		<Unit filename="D:/programming/cpp/alphav3/components/validator/validator.cpp">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="D:/programming/cpp/alphav3/components/validator/validator.hpp">
+			<Option target="Alpha"/>
+		</Unit>
 		<Unit filename="D:/programming/cpp/alphav3/headers/json.h">
 			<Option target="Alpha"/>
 		</Unit>

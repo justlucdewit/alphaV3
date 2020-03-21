@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Alpha.dir/components/tokenSplitter/tokenSplitter.cpp.obj"
   "CMakeFiles/Alpha.dir/components/tokenSys/tokenSys.cpp.obj"
   "CMakeFiles/Alpha.dir/components/typeIdentifier/typeIdentifier.cpp.obj"
+  "CMakeFiles/Alpha.dir/components/validator/validator.cpp.obj"
   "CMakeFiles/Alpha.dir/main.cpp.obj"
 )
 

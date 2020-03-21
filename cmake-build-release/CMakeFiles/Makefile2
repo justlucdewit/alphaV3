@@ -75,12 +75,12 @@ preinstall:
 CMakeFiles\Alpha.dir\all:
 	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\depend
 	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\programming\cpp\alphav3\cmake-build-release\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target Alpha"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\programming\cpp\alphav3\cmake-build-release\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target Alpha"
 .PHONY : CMakeFiles\Alpha.dir\all
 
 # Build rule for subdir invocation for target.
 CMakeFiles\Alpha.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\programming\cpp\alphav3\cmake-build-release\CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\programming\cpp\alphav3\cmake-build-release\CMakeFiles 10
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\programming\cpp\alphav3\cmake-build-release\CMakeFiles 0
 .PHONY : CMakeFiles\Alpha.dir\rule

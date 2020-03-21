@@ -210,6 +210,25 @@ CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.s: cmake_for
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.s /c D:\programming\cpp\alphav3\components\markerExtracter\markerExtracter.cpp
 <<
 
+CMakeFiles\Alpha.dir\components\validator\validator.cpp.obj: CMakeFiles\Alpha.dir\flags.make
+CMakeFiles\Alpha.dir\components\validator\validator.cpp.obj: ..\components\validator\validator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programming\cpp\alphav3\cmake-build-minsizerel\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Alpha.dir/components/validator/validator.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Alpha.dir\components\validator\validator.cpp.obj /FdCMakeFiles\Alpha.dir\ /FS -c D:\programming\cpp\alphav3\components\validator\validator.cpp
+<<
+
+CMakeFiles\Alpha.dir\components\validator\validator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Alpha.dir/components/validator/validator.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Alpha.dir\components\validator\validator.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\cpp\alphav3\components\validator\validator.cpp
+<<
+
+CMakeFiles\Alpha.dir\components\validator\validator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Alpha.dir/components/validator/validator.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Alpha.dir\components\validator\validator.cpp.s /c D:\programming\cpp\alphav3\components\validator\validator.cpp
+<<
+
 # Object files for target Alpha
 Alpha_OBJECTS = \
 "CMakeFiles\Alpha.dir\main.cpp.obj" \
@@ -219,7 +238,8 @@ Alpha_OBJECTS = \
 "CMakeFiles\Alpha.dir\components\tokenSys\tokenSys.cpp.obj" \
 "CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.obj" \
 "CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.obj" \
-"CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.obj"
+"CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.obj" \
+"CMakeFiles\Alpha.dir\components\validator\validator.cpp.obj"
 
 # External object files for target Alpha
 Alpha_EXTERNAL_OBJECTS =
@@ -232,9 +252,10 @@ Alpha.exe: CMakeFiles\Alpha.dir\components\tokenSys\tokenSys.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.obj
+Alpha.exe: CMakeFiles\Alpha.dir\components\validator\validator.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\build.make
 Alpha.exe: CMakeFiles\Alpha.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\programming\cpp\alphav3\cmake-build-minsizerel\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Alpha.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\programming\cpp\alphav3\cmake-build-minsizerel\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Alpha.exe"
 	"C:\Program Files\JetBrains\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\Alpha.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\Alpha.dir\objects1.rsp @<<
  /out:Alpha.exe /implib:Alpha.lib /pdb:D:\programming\cpp\alphav3\cmake-build-minsizerel\Alpha.pdb /version:0.0  /machine:X86 /INCREMENTAL:NO /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
