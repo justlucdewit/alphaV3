@@ -205,6 +205,33 @@ components\fileReader\fileReader.cpp.s:
 	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\fileReader\fileReader.cpp.s
 .PHONY : components\fileReader\fileReader.cpp.s
 
+components\markerExtracter\markerExtracter.obj: components\markerExtracter\markerExtracter.cpp.obj
+
+.PHONY : components\markerExtracter\markerExtracter.obj
+
+# target to build an object file
+components\markerExtracter\markerExtracter.cpp.obj:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.obj
+.PHONY : components\markerExtracter\markerExtracter.cpp.obj
+
+components\markerExtracter\markerExtracter.i: components\markerExtracter\markerExtracter.cpp.i
+
+.PHONY : components\markerExtracter\markerExtracter.i
+
+# target to preprocess a source file
+components\markerExtracter\markerExtracter.cpp.i:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.i
+.PHONY : components\markerExtracter\markerExtracter.cpp.i
+
+components\markerExtracter\markerExtracter.s: components\markerExtracter\markerExtracter.cpp.s
+
+.PHONY : components\markerExtracter\markerExtracter.s
+
+# target to generate assembly for a file
+components\markerExtracter\markerExtracter.cpp.s:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.s
+.PHONY : components\markerExtracter\markerExtracter.cpp.s
+
 components\tokenSplitter\tokenSplitter.obj: components\tokenSplitter\tokenSplitter.cpp.obj
 
 .PHONY : components\tokenSplitter\tokenSplitter.obj
@@ -331,6 +358,9 @@ help:
 	@echo ... components/fileReader/fileReader.obj
 	@echo ... components/fileReader/fileReader.i
 	@echo ... components/fileReader/fileReader.s
+	@echo ... components/markerExtracter/markerExtracter.obj
+	@echo ... components/markerExtracter/markerExtracter.i
+	@echo ... components/markerExtracter/markerExtracter.s
 	@echo ... components/tokenSplitter/tokenSplitter.obj
 	@echo ... components/tokenSplitter/tokenSplitter.i
 	@echo ... components/tokenSplitter/tokenSplitter.s

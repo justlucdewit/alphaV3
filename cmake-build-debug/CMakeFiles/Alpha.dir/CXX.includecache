@@ -6,14 +6,18 @@
 
 #IncludeRegexTransform: 
 
-D:/programming/cpp/alphav3/components/tokenSplitter/tokenSplitter.cpp
-tokenSplitter.hpp
-D:/programming/cpp/alphav3/components/tokenSplitter/tokenSplitter.hpp
+D:/programming/cpp/alphav3/components/markerExtracter/markerExtracter.cpp
+markerExtracter.hpp
+D:/programming/cpp/alphav3/components/markerExtracter/markerExtracter.hpp
 
-D:/programming/cpp/alphav3/components/tokenSplitter/tokenSplitter.hpp
+D:/programming/cpp/alphav3/components/markerExtracter/markerExtracter.hpp
+iostream
+-
 vector
 -
 string
+-
+map
 -
 ../tokenSys/tokenSys.hpp
 D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp

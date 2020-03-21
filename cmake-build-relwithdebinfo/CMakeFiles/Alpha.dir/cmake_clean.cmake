@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Alpha.dir/components/configLoader/configLoader.cpp.obj"
   "CMakeFiles/Alpha.dir/components/errorSys/errorSys.cpp.obj"
   "CMakeFiles/Alpha.dir/components/fileReader/fileReader.cpp.obj"
+  "CMakeFiles/Alpha.dir/components/markerExtracter/markerExtracter.cpp.obj"
   "CMakeFiles/Alpha.dir/components/tokenSplitter/tokenSplitter.cpp.obj"
   "CMakeFiles/Alpha.dir/components/tokenSys/tokenSys.cpp.obj"
   "CMakeFiles/Alpha.dir/components/typeIdentifier/typeIdentifier.cpp.obj"

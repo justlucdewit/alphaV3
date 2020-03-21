@@ -13,6 +13,10 @@ CMakeFiles\Alpha.dir\components\fileReader\fileReader.cpp.obj: ..\components\err
 CMakeFiles\Alpha.dir\components\fileReader\fileReader.cpp.obj: ..\components\fileReader\fileReader.cpp
 CMakeFiles\Alpha.dir\components\fileReader\fileReader.cpp.obj: ..\components\fileReader\fileReader.hpp
 
+CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.obj: ..\components\markerExtracter\markerExtracter.cpp
+CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.obj: ..\components\markerExtracter\markerExtracter.hpp
+CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.obj: ..\components\tokenSys\tokenSys.hpp
+
 CMakeFiles\Alpha.dir\components\tokenSplitter\tokenSplitter.cpp.obj: ..\components\tokenSplitter\tokenSplitter.cpp
 CMakeFiles\Alpha.dir\components\tokenSplitter\tokenSplitter.cpp.obj: ..\components\tokenSplitter\tokenSplitter.hpp
 CMakeFiles\Alpha.dir\components\tokenSplitter\tokenSplitter.cpp.obj: ..\components\tokenSys\tokenSys.hpp
@@ -26,6 +30,7 @@ CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.obj: ..\compon
 
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\configLoader\configLoader.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\fileReader\fileReader.hpp
+CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\markerExtracter\markerExtracter.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\tokenSplitter\tokenSplitter.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\tokenSys\tokenSys.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\typeIdentifier\typeIdentifier.hpp

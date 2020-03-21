@@ -16,7 +16,7 @@ std::vector<Token> tokenSplitter(std::string sourceCode)
     std::string tempstring;
     bool commentMode = false;
     char stringMode = 0;
-    char lastChar;
+    char lastChar = 0;
 
     for (unsigned int i = 0; i<sourceCode.size(); i++)
     {
@@ -51,10 +51,8 @@ std::vector<Token> tokenSplitter(std::string sourceCode)
                     stringMode = 1;
                     tempstring += c;
                 } else if (CharIsEmpty(c)) {
-                    if (!tempstring.empty() && !stringMode) {
-                        tokens.push_back(Token(tempstring));
-                        tempstring = "";
-                    }
+                    tokens.push_back(Token(tempstring));
+                    tempstring = "";
                 } else {
                     tempstring += c;
                 }

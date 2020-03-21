@@ -8,6 +8,7 @@
 #include "components/tokenSys/tokenSys.hpp"
 #include "components/configLoader/configLoader.hpp"
 #include "components/typeIdentifier/typeIdentifier.hpp"
+#include "components/markerExtracter/markerExtracter.hpp"
 
 /*
 	alpha is the interpreter CLI for the alphacode language
@@ -41,12 +42,26 @@ int main(int argc, char** argv)
         //read the tokens and assign a type
         typeIdentifier(tokens, argData);
 
+        //remove tokens from source code, and store them in token memory
+        std::map<std::string, int> markerMemory = extractMarkers(tokens);
+
         //go over every token and print it to console
+        std::cout << "tokens:\n";
 		for (unsigned int i = 0; i < tokens.size(); i++)
 		{
 		    std::cout << i+1 << " ";
             printToken(tokens[i]);
 		}
+
+        std::cout << "\nmarker memory:\n";
+		int i = 0;
+        for (const auto& marker : markerMemory)
+        {
+            std::cout << i+1 << " ";
+            std::cout << marker.first << " is at token index " << marker.second << "\n";
+            i++;
+        }
+
 		std::cout << "\nend";
     }
     else

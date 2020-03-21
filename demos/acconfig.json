@@ -2,17 +2,24 @@
   "commands": [
     {
       "name": "let",
-      "args": [["var"], ["str", "num"]]
+      "args": [
+        ["var"],
+        ["str", "num"]
+      ]
     },
 
     {
       "name": "print",
-      "args": [["var", "num", "str"]]
+      "args": [
+        ["var", "num", "str"]
+      ]
     },
 
     {
       "name": "exit",
-      "args": [["var", "num"]]
+      "args": [
+        ["var", "num"]
+      ]
     }
   ]
 }

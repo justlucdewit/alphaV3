@@ -1,3 +1,6 @@
+:someMarker #index 0
+:dupeMarker #index 0
 let str "hello world\n" #make string variable
+:secondMarker #index 3
 print str #print string variable
 exit 0 #exit the program

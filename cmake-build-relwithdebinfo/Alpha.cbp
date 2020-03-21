@@ -100,6 +100,12 @@
 		<Unit filename="D:/programming/cpp/alphav3/components/fileReader/fileReader.hpp">
 			<Option target="Alpha"/>
 		</Unit>
+		<Unit filename="D:/programming/cpp/alphav3/components/markerExtracter/markerExtracter.cpp">
+			<Option target="Alpha"/>
+		</Unit>
+		<Unit filename="D:/programming/cpp/alphav3/components/markerExtracter/markerExtracter.h">
+			<Option target="Alpha"/>
+		</Unit>
 		<Unit filename="D:/programming/cpp/alphav3/components/tokenSplitter/tokenSplitter.cpp">
 			<Option target="Alpha"/>
 		</Unit>
