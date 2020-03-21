@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
+D:/programming/cpp/alphav3/components/tokenSplitter/tokenSplitter.cpp
+tokenSplitter.hpp
+D:/programming/cpp/alphav3/components/tokenSplitter/tokenSplitter.hpp
 
-D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.cpp
-typeIdentifier.hpp
-D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.hpp
-
-D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.hpp
-string
--
+D:/programming/cpp/alphav3/components/tokenSplitter/tokenSplitter.hpp
 vector
 -
+string
+-
 ../tokenSys/tokenSys.hpp
+D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
+
 D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
 
