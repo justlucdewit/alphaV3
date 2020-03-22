@@ -17,10 +17,14 @@ std::vector<Token> tokenSplitter(std::string sourceCode)
     bool commentMode = false;
     char stringMode = 0;
     char lastChar = 0;
+    int lineNr = 1;
 
     for (unsigned int i = 0; i<sourceCode.size(); i++)
     {
         const char c = sourceCode[i];
+        if (c == '\n'){
+            lineNr++;
+        }
 
         if (stringMode == 2){
             if (c == '"' && lastChar != '\\'){
@@ -51,7 +55,9 @@ std::vector<Token> tokenSplitter(std::string sourceCode)
                     stringMode = 1;
                     tempstring += c;
                 } else if (CharIsEmpty(c)) {
-                    tokens.push_back(Token(tempstring));
+                    Token newToken = Token(tempstring);
+                    newToken.lineFound = lineNr;
+                    tokens.push_back(newToken);
                     tempstring = "";
                 } else {
                     tempstring += c;

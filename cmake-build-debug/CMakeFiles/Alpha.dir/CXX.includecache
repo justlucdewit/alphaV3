@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+D:/programming/cpp/alphav3/components/errorSys/errorSys.hpp
+string
+-
+
 D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
 
 D:/programming/cpp/alphav3/components/validator/validator.cpp
@@ -23,4 +27,6 @@ map
 -
 ../tokenSys/tokenSys.hpp
 D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
+../errorSys/errorSys.hpp
+D:/programming/cpp/alphav3/components/errorSys/errorSys.hpp
 

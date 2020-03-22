@@ -1,2 +1,3 @@
 #pragma once
-void throwError(unsigned short);
+#include <string>
+void throwError(std::string);

@@ -1,17 +1,55 @@
 #include "validator.hpp"
+
 void validate(std::vector<Token> tokens, std::map<std::string, std::vector<std::vector<TokenType>>> argData)
 {
-    int i = 0;
+    unsigned int i = 0;
     while (i < tokens.size()-1)
     {
         Token command = tokens[i];
         std::vector<Token> arguments;
         i++;
-        while(tokens[i].type != alph_command && i < tokens.size()-1){
-            arguments.push_back(tokens[i]);
-            i++;
+        while(i < tokens.size() && tokens[i].type != alph_command)
+            arguments.push_back(tokens[i++]);
+
+        // check argument count
+        if (arguments.size() != argData[command.value].size()){
+            std::string errorMsg;
+            if (arguments.size() > argData[command.value].size()) {
+                errorMsg += "[ERROR 100] command \"";
+                errorMsg += command.value += "\", on line ";
+                errorMsg += std::to_string(command.lineFound) += " has too many arguments";
+            }else{
+                errorMsg += "[ERROR 101] command \"";
+                errorMsg += command.value += "\" on line ";
+                errorMsg += std::to_string(command.lineFound) += " has too few arguments";
+            }
+            throwError(errorMsg);
         }
 
-        std::cout << "arguments found: " << arguments.size() << "\n";
+        // check argument type
+        int argi = 0;
+        for (const auto arg : arguments){
+            std::vector<TokenType> allowedArgs = argData[command.value][argi++];
+            if (std::find(allowedArgs.begin(), allowedArgs.end(), arg.type) == allowedArgs.end()){
+                std::string errorMsg;
+                errorMsg += "[ERROR 102] argument of type ";
+                errorMsg += typeToString(arg.type);
+                if (argi == 1){
+                    errorMsg += " isnt allowed as 1st argument of command ";
+                }else if (argi == 2){
+                    errorMsg += " isnt allowed as 2nd argument of command ";
+                }else if(argi == 3){
+                    errorMsg += " isnt allowed as 3rd argument of command ";
+                }else{
+                    errorMsg += " isnt allowed as ";
+                    errorMsg += std::to_string(argi) += "th";
+                    errorMsg += " argument of command ";
+                }
+
+                errorMsg += command.value;
+
+                throwError(errorMsg);
+            }
+        }
     }
 }

@@ -21,11 +21,11 @@ std::string fileReader(const char* filepath)
     {
 		if (path.compare(path.length()-3, 3, ".ac") == 0)
 		{
-			throwError(0);
+			throwError("[ERROR 000] the .ac file could not be read, did you spell it correctly?");
 		}
 		else if(path.compare(path.length()-5, 5, ".json") == 0)
 		{
-			throwError(1);
+			throwError("[ERROR 001] no acconfig.json file has been found");
 		}
     }
 

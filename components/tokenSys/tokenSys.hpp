@@ -24,6 +24,7 @@ struct Token
 {
     std::string value;
     TokenType type;
+    unsigned int lineFound;
     Token();
     Token(std::string);
 };
