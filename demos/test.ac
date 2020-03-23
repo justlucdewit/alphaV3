@@ -1,3 +1,6 @@
+let num 0
 :loop
-print "hello world"
+print num
+print "\n"
+more num
 goto loop

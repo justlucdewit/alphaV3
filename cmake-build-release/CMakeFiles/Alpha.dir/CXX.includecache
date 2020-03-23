@@ -19,16 +19,16 @@ string
 -
 ../tokenSys/tokenSys.hpp
 D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
+../variableSystem/variableSyste.hpp
+D:/programming/cpp/alphav3/components/variableSystem/variableSyste.hpp
+../errorSys/errorSys.hpp
+D:/programming/cpp/alphav3/components/errorSys/errorSys.hpp
 
 D:/programming/cpp/alphav3/components/errorSys/errorSys.hpp
 string
 -
 
 D:/programming/cpp/alphav3/components/fileReader/fileReader.hpp
-
-D:/programming/cpp/alphav3/components/interpreter/interpreter.cpp
-interpreter.hpp
-D:/programming/cpp/alphav3/components/interpreter/interpreter.hpp
 
 D:/programming/cpp/alphav3/components/interpreter/interpreter.hpp
 vector
@@ -64,6 +64,10 @@ D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
 
 D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
 
+D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.cpp
+typeIdentifier.hpp
+D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.hpp
+
 D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.hpp
 string
 -
@@ -87,6 +91,10 @@ map
 D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
 ../errorSys/errorSys.hpp
 D:/programming/cpp/alphav3/components/errorSys/errorSys.hpp
+
+D:/programming/cpp/alphav3/components/variableSystem/variableSyste.hpp
+string
+-
 
 D:/programming/cpp/alphav3/main.cpp
 iostream

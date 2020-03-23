@@ -40,5 +40,6 @@ CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\tokenSplitter\tokenSplitter.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\tokenSys\tokenSys.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\typeIdentifier\typeIdentifier.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\validator\validator.hpp
+CMakeFiles\Alpha.dir\main.cpp.obj: ..\components\variableSystem\variableSyste.hpp
 CMakeFiles\Alpha.dir\main.cpp.obj: ..\main.cpp
 

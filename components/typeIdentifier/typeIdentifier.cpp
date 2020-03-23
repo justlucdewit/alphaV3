@@ -1,5 +1,16 @@
 #include "typeIdentifier.hpp"
 
+std::string substrReplace(std::string data, std::string toSearch, std::string replaceStr){
+    size_t pos = data.find(toSearch);
+    while( pos != std::string::npos)
+    {
+        data.replace(pos, toSearch.size(), replaceStr);
+        pos =data.find(toSearch, pos + replaceStr.size());
+    }
+
+    return data;
+}
+
 bool isNumber(std::string s)
 {
     std::size_t char_pos(0);
@@ -60,9 +71,22 @@ void typeIdentifier(std::vector<Token>& tokens, std::map<std::string, std::vecto
         else if(isString(t.value))
         {
             t.type = alph_string;
+
             // remove quotes
             t.value.pop_back();
             t.value.erase(0, 1);
+
+            //replace escape chars
+            t.value = substrReplace(t.value, "\\n", "\n");
+            t.value = substrReplace(t.value, "\\t", "\t");
+            t.value = substrReplace(t.value, "\\a", "\a");
+            t.value = substrReplace(t.value, "\\b", "\b");
+            t.value = substrReplace(t.value, "\\r", "\r");
+            t.value = substrReplace(t.value, "\\v", "\v");
+            t.value = substrReplace(t.value, "\\\\", "\\");
+            t.value = substrReplace(t.value, "\\\'", "\'");
+            t.value = substrReplace(t.value, "\\\"", "\"");
+            t.value = substrReplace(t.value, "\\\'", "\'");
         }
 
         else if(isCommand(t.value, commands))

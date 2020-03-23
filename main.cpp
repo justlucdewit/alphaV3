@@ -50,6 +50,7 @@ int main(int argc, char** argv)
 
         //run the code
         interpret(tokens, functions, markerMemory);
+
     }
     else
     {//print the version name
