@@ -6,10 +6,11 @@
 #include "components/tokenSplitter/tokenSplitter.hpp"
 #include "components/fileReader/fileReader.hpp"
 #include "components/tokenSys/tokenSys.hpp"
-#include "components/configLoader/configLoader.hpp"
 #include "components/typeIdentifier/typeIdentifier.hpp"
 #include "components/markerExtracter/markerExtracter.hpp"
 #include "components/validator/validator.hpp"
+#include "components/commandsystem/commandsystem.hpp"
+#include "components/interpreter/interpreter.hpp"
 
 /*
 	alpha is the interpreter CLI for the alphacode language
@@ -29,10 +30,8 @@ int main(int argc, char** argv)
 {
     if (argc >= 2)
 	{//assume the argument is a file name to be ran
-        std::map<std::string, std::vector<std::vector<TokenType>>> argData;// list of arguments used by commands
-
-        //extract config data from acconfig.json
-        loadConfig(argv[1], argData);
+        //define the command functions
+        initCommands();
 
         //extract the source code from the file
 		std::string sourceCode = fileReader(argv[1]);
@@ -49,24 +48,8 @@ int main(int argc, char** argv)
         //validate the token, throw error if error found
         validate(tokens, argData);
 
-        //go over every token and print it to console
-        std::cout << "tokens:\n";
-		for (unsigned int i = 0; i < tokens.size(); i++)
-		{
-		    std::cout << i+1 << " ";
-            printToken(tokens[i]);
-		}
-
-        std::cout << "\nmarker memory:\n";
-		int i = 0;
-        for (const auto& marker : markerMemory)
-        {
-            std::cout << i+1 << " ";
-            std::cout << marker.first << " is at token index " << marker.second << "\n";
-            i++;
-        }
-
-		std::cout << "\nend";
+        //run the code
+        interpret(tokens, functions, markerMemory);
     }
     else
     {//print the version name

@@ -36,12 +36,12 @@ bool isString(std::string s)
     return (s.front() == '\'' && s.back() == '\'') || (s.front() == '"' && s.back() == '"');
 }
 
-bool isCommand(std::string s, std::map<std::string, std::vector<std::vector<TokenType>>> commands)
+bool isCommand(std::string s, std::map<std::string, std::vector<std::vector<alph_TokenType>>> commands)
 {
     return commands.find(s) != commands.end();
 }
 
-void typeIdentifier(std::vector<Token>& tokens, std::map<std::string, std::vector<std::vector<TokenType>>> commands)
+void typeIdentifier(std::vector<Token>& tokens, std::map<std::string, std::vector<std::vector<alph_TokenType>>> commands)
 {
     for (auto& t : tokens)
     {
@@ -60,6 +60,9 @@ void typeIdentifier(std::vector<Token>& tokens, std::map<std::string, std::vecto
         else if(isString(t.value))
         {
             t.type = alph_string;
+            // remove quotes
+            t.value.pop_back();
+            t.value.erase(0, 1);
         }
 
         else if(isCommand(t.value, commands))

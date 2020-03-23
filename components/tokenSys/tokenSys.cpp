@@ -25,7 +25,7 @@ Token::Token(std::string str){
  * typeToString is a function that transforms a TokenType in a
  * string representation of that type, so it can be printed to the console
  */
-const char* typeToString(TokenType t){
+const char* typeToString(alph_TokenType t){
     switch(t){
         case alph_number: return "number";
         case alph_string: return "string";
@@ -49,7 +49,7 @@ void printToken(Token t){
  * function to turn a abstractly named type from acconfig into
  * a TokenType
  */
-TokenType typeConvert(std::string s){
+alph_TokenType typeConvert(std::string s){
     if (s == "var") return alph_variable;
     if (s == "str") return alph_string;
     if (s == "num") return alph_number;

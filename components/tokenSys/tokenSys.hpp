@@ -5,7 +5,7 @@
  * of what type a token is, this is only used for checking
  * what type a token is, and inside the Token struct
  */
-typedef enum TokenType : unsigned char
+enum alph_TokenType : unsigned char
 {
     alph_number,
     alph_string,
@@ -13,7 +13,7 @@ typedef enum TokenType : unsigned char
     alph_variable,
     alph_marker,
     alph_undefined
-}TokenType;
+};
 
 /*
  * Token is a struct, that stores all of the value type pairs
@@ -23,12 +23,12 @@ typedef enum TokenType : unsigned char
 struct Token
 {
     std::string value;
-    TokenType type;
+    alph_TokenType type;
     unsigned int lineFound;
     Token();
     Token(std::string);
 };
 
 void printToken(Token);
-const char* typeToString(TokenType);
-TokenType typeConvert(std::string);
+const char* typeToString(alph_TokenType);
+alph_TokenType typeConvert(std::string);

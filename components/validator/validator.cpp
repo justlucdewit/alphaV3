@@ -1,6 +1,6 @@
 #include "validator.hpp"
 
-void validate(std::vector<Token> tokens, std::map<std::string, std::vector<std::vector<TokenType>>> argData)
+void validate(std::vector<Token> tokens, std::map<std::string, std::vector<std::vector<alph_TokenType>>> argData)
 {
     unsigned int i = 0;
     while (i < tokens.size()-1)
@@ -29,7 +29,7 @@ void validate(std::vector<Token> tokens, std::map<std::string, std::vector<std::
         // check argument type
         int argi = 0;
         for (const auto arg : arguments){
-            std::vector<TokenType> allowedArgs = argData[command.value][argi++];
+            std::vector<alph_TokenType> allowedArgs = argData[command.value][argi++];
             if (std::find(allowedArgs.begin(), allowedArgs.end(), arg.type) == allowedArgs.end()){
                 std::string errorMsg;
                 errorMsg += "[ERROR 102] argument of type ";

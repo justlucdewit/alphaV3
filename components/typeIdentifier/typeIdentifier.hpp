@@ -8,6 +8,6 @@
 bool isNumber(std::string);
 bool isMarker(std::string);
 bool isString(std::string);
-bool isCommand(std::string, std::map<std::string, std::vector<std::vector<TokenType>>>);
+bool isCommand(std::string, std::map<std::string, std::vector<std::vector<alph_TokenType>>>);
 
-void typeIdentifier(std::vector<Token>&, std::map<std::string, std::vector<std::vector<TokenType>>>);
+void typeIdentifier(std::vector<Token>&, std::map<std::string, std::vector<std::vector<alph_TokenType>>>);

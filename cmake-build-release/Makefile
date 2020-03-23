@@ -124,33 +124,6 @@ Alpha\fast:
 	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\build
 .PHONY : Alpha\fast
 
-components\configLoader\configLoader.obj: components\configLoader\configLoader.cpp.obj
-
-.PHONY : components\configLoader\configLoader.obj
-
-# target to build an object file
-components\configLoader\configLoader.cpp.obj:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.obj
-.PHONY : components\configLoader\configLoader.cpp.obj
-
-components\configLoader\configLoader.i: components\configLoader\configLoader.cpp.i
-
-.PHONY : components\configLoader\configLoader.i
-
-# target to preprocess a source file
-components\configLoader\configLoader.cpp.i:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.i
-.PHONY : components\configLoader\configLoader.cpp.i
-
-components\configLoader\configLoader.s: components\configLoader\configLoader.cpp.s
-
-.PHONY : components\configLoader\configLoader.s
-
-# target to generate assembly for a file
-components\configLoader\configLoader.cpp.s:
-	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.s
-.PHONY : components\configLoader\configLoader.cpp.s
-
 components\errorSys\errorSys.obj: components\errorSys\errorSys.cpp.obj
 
 .PHONY : components\errorSys\errorSys.obj
@@ -204,6 +177,33 @@ components\fileReader\fileReader.s: components\fileReader\fileReader.cpp.s
 components\fileReader\fileReader.cpp.s:
 	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\fileReader\fileReader.cpp.s
 .PHONY : components\fileReader\fileReader.cpp.s
+
+components\interpreter\interpreter.obj: components\interpreter\interpreter.cpp.obj
+
+.PHONY : components\interpreter\interpreter.obj
+
+# target to build an object file
+components\interpreter\interpreter.cpp.obj:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\interpreter\interpreter.cpp.obj
+.PHONY : components\interpreter\interpreter.cpp.obj
+
+components\interpreter\interpreter.i: components\interpreter\interpreter.cpp.i
+
+.PHONY : components\interpreter\interpreter.i
+
+# target to preprocess a source file
+components\interpreter\interpreter.cpp.i:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\interpreter\interpreter.cpp.i
+.PHONY : components\interpreter\interpreter.cpp.i
+
+components\interpreter\interpreter.s: components\interpreter\interpreter.cpp.s
+
+.PHONY : components\interpreter\interpreter.s
+
+# target to generate assembly for a file
+components\interpreter\interpreter.cpp.s:
+	$(MAKE) -f CMakeFiles\Alpha.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Alpha.dir\components\interpreter\interpreter.cpp.s
+.PHONY : components\interpreter\interpreter.cpp.s
 
 components\markerExtracter\markerExtracter.obj: components\markerExtracter\markerExtracter.cpp.obj
 
@@ -376,15 +376,15 @@ help:
 	@echo ... Alpha
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... components/configLoader/configLoader.obj
-	@echo ... components/configLoader/configLoader.i
-	@echo ... components/configLoader/configLoader.s
 	@echo ... components/errorSys/errorSys.obj
 	@echo ... components/errorSys/errorSys.i
 	@echo ... components/errorSys/errorSys.s
 	@echo ... components/fileReader/fileReader.obj
 	@echo ... components/fileReader/fileReader.i
 	@echo ... components/fileReader/fileReader.s
+	@echo ... components/interpreter/interpreter.obj
+	@echo ... components/interpreter/interpreter.i
+	@echo ... components/interpreter/interpreter.s
 	@echo ... components/markerExtracter/markerExtracter.obj
 	@echo ... components/markerExtracter/markerExtracter.i
 	@echo ... components/markerExtracter/markerExtracter.s

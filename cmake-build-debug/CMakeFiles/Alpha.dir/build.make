@@ -153,28 +153,9 @@ CMakeFiles\Alpha.dir\components\tokenSys\tokenSys.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Alpha.dir\components\tokenSys\tokenSys.cpp.s /c D:\programming\cpp\alphav3\components\tokenSys\tokenSys.cpp
 <<
 
-CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.obj: CMakeFiles\Alpha.dir\flags.make
-CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.obj: ..\components\configLoader\configLoader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programming\cpp\alphav3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Alpha.dir/components/configLoader/configLoader.cpp.obj"
-	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.obj /FdCMakeFiles\Alpha.dir\ /FS -c D:\programming\cpp\alphav3\components\configLoader\configLoader.cpp
-<<
-
-CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Alpha.dir/components/configLoader/configLoader.cpp.i"
-	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\cpp\alphav3\components\configLoader\configLoader.cpp
-<<
-
-CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Alpha.dir/components/configLoader/configLoader.cpp.s"
-	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.s /c D:\programming\cpp\alphav3\components\configLoader\configLoader.cpp
-<<
-
 CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.obj: CMakeFiles\Alpha.dir\flags.make
 CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.obj: ..\components\typeIdentifier\typeIdentifier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programming\cpp\alphav3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Alpha.dir/components/typeIdentifier/typeIdentifier.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programming\cpp\alphav3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Alpha.dir/components/typeIdentifier/typeIdentifier.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.obj /FdCMakeFiles\Alpha.dir\ /FS -c D:\programming\cpp\alphav3\components\typeIdentifier\typeIdentifier.cpp
 <<
@@ -193,7 +174,7 @@ CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.s: cmake_force
 
 CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.obj: CMakeFiles\Alpha.dir\flags.make
 CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.obj: ..\components\markerExtracter\markerExtracter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programming\cpp\alphav3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Alpha.dir/components/markerExtracter/markerExtracter.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programming\cpp\alphav3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Alpha.dir/components/markerExtracter/markerExtracter.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.obj /FdCMakeFiles\Alpha.dir\ /FS -c D:\programming\cpp\alphav3\components\markerExtracter\markerExtracter.cpp
 <<
@@ -212,7 +193,7 @@ CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.s: cmake_for
 
 CMakeFiles\Alpha.dir\components\validator\validator.cpp.obj: CMakeFiles\Alpha.dir\flags.make
 CMakeFiles\Alpha.dir\components\validator\validator.cpp.obj: ..\components\validator\validator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programming\cpp\alphav3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Alpha.dir/components/validator/validator.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programming\cpp\alphav3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Alpha.dir/components/validator/validator.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Alpha.dir\components\validator\validator.cpp.obj /FdCMakeFiles\Alpha.dir\ /FS -c D:\programming\cpp\alphav3\components\validator\validator.cpp
 <<
@@ -229,6 +210,25 @@ CMakeFiles\Alpha.dir\components\validator\validator.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Alpha.dir\components\validator\validator.cpp.s /c D:\programming\cpp\alphav3\components\validator\validator.cpp
 <<
 
+CMakeFiles\Alpha.dir\components\interpreter\interpreter.cpp.obj: CMakeFiles\Alpha.dir\flags.make
+CMakeFiles\Alpha.dir\components\interpreter\interpreter.cpp.obj: ..\components\interpreter\interpreter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\programming\cpp\alphav3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Alpha.dir/components/interpreter/interpreter.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Alpha.dir\components\interpreter\interpreter.cpp.obj /FdCMakeFiles\Alpha.dir\ /FS -c D:\programming\cpp\alphav3\components\interpreter\interpreter.cpp
+<<
+
+CMakeFiles\Alpha.dir\components\interpreter\interpreter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Alpha.dir/components/interpreter/interpreter.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe > CMakeFiles\Alpha.dir\components\interpreter\interpreter.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\cpp\alphav3\components\interpreter\interpreter.cpp
+<<
+
+CMakeFiles\Alpha.dir\components\interpreter\interpreter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Alpha.dir/components/interpreter/interpreter.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1423~1.281\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Alpha.dir\components\interpreter\interpreter.cpp.s /c D:\programming\cpp\alphav3\components\interpreter\interpreter.cpp
+<<
+
 # Object files for target Alpha
 Alpha_OBJECTS = \
 "CMakeFiles\Alpha.dir\main.cpp.obj" \
@@ -236,10 +236,10 @@ Alpha_OBJECTS = \
 "CMakeFiles\Alpha.dir\components\errorSys\errorSys.cpp.obj" \
 "CMakeFiles\Alpha.dir\components\tokenSplitter\tokenSplitter.cpp.obj" \
 "CMakeFiles\Alpha.dir\components\tokenSys\tokenSys.cpp.obj" \
-"CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.obj" \
 "CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.obj" \
 "CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.obj" \
-"CMakeFiles\Alpha.dir\components\validator\validator.cpp.obj"
+"CMakeFiles\Alpha.dir\components\validator\validator.cpp.obj" \
+"CMakeFiles\Alpha.dir\components\interpreter\interpreter.cpp.obj"
 
 # External object files for target Alpha
 Alpha_EXTERNAL_OBJECTS =
@@ -249,10 +249,10 @@ Alpha.exe: CMakeFiles\Alpha.dir\components\fileReader\fileReader.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\components\errorSys\errorSys.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\components\tokenSplitter\tokenSplitter.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\components\tokenSys\tokenSys.cpp.obj
-Alpha.exe: CMakeFiles\Alpha.dir\components\configLoader\configLoader.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\components\typeIdentifier\typeIdentifier.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\components\markerExtracter\markerExtracter.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\components\validator\validator.cpp.obj
+Alpha.exe: CMakeFiles\Alpha.dir\components\interpreter\interpreter.cpp.obj
 Alpha.exe: CMakeFiles\Alpha.dir\build.make
 Alpha.exe: CMakeFiles\Alpha.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\programming\cpp\alphav3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Alpha.exe"

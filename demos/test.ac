@@ -1,6 +1,3 @@
-:someMarker
-:dupeMarker
-let str "hello world\n"
-:secondMarker
-print str
-exit "some str"
+:loop
+print "hello world"
+goto loop
