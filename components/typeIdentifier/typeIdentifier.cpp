@@ -1,5 +1,7 @@
 #include "typeIdentifier.hpp"
 
+#include <iostream>
+
 std::string substrReplace(std::string data, std::string toSearch, std::string replaceStr){
     size_t pos = data.find(toSearch);
     while( pos != std::string::npos)
@@ -56,6 +58,7 @@ void typeIdentifier(std::vector<Token>& tokens, std::map<std::string, std::vecto
 {
     for (auto& t : tokens)
     {
+        std::cout << "now at " << t.value << "\n";
         t.type = alph_variable;
 
         if (isNumber(t.value))

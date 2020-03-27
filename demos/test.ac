@@ -1,6 +1,6 @@
-let num 0
+let n 1
 :loop
-print num
+print n
 print "\n"
-more num
+more n
 goto loop

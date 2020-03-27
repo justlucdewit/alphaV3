@@ -30,6 +30,10 @@ string
 
 D:/programming/cpp/alphav3/components/fileReader/fileReader.hpp
 
+D:/programming/cpp/alphav3/components/interpreter/interpreter.cpp
+interpreter.hpp
+D:/programming/cpp/alphav3/components/interpreter/interpreter.hpp
+
 D:/programming/cpp/alphav3/components/interpreter/interpreter.hpp
 vector
 -
@@ -39,8 +43,14 @@ string
 -
 functional
 -
+iostream
+-
 ../tokenSys/tokenSys.hpp
 D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
+
+D:/programming/cpp/alphav3/components/markerExtracter/markerExtracter.cpp
+markerExtracter.hpp
+D:/programming/cpp/alphav3/components/markerExtracter/markerExtracter.hpp
 
 D:/programming/cpp/alphav3/components/markerExtracter/markerExtracter.hpp
 iostream
@@ -54,6 +64,10 @@ map
 ../tokenSys/tokenSys.hpp
 D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
 
+D:/programming/cpp/alphav3/components/tokenSplitter/tokenSplitter.cpp
+tokenSplitter.hpp
+D:/programming/cpp/alphav3/components/tokenSplitter/tokenSplitter.hpp
+
 D:/programming/cpp/alphav3/components/tokenSplitter/tokenSplitter.hpp
 vector
 -
@@ -62,11 +76,21 @@ string
 ../tokenSys/tokenSys.hpp
 D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
 
+D:/programming/cpp/alphav3/components/tokenSys/tokenSys.cpp
+iostream
+-
+tokenSys.hpp
 D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
+
+D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
+vector
+-
 
 D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.cpp
 typeIdentifier.hpp
 D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.hpp
+iostream
+-
 
 D:/programming/cpp/alphav3/components/typeIdentifier/typeIdentifier.hpp
 string
@@ -77,6 +101,10 @@ map
 -
 ../tokenSys/tokenSys.hpp
 D:/programming/cpp/alphav3/components/tokenSys/tokenSys.hpp
+
+D:/programming/cpp/alphav3/components/validator/validator.cpp
+validator.hpp
+D:/programming/cpp/alphav3/components/validator/validator.hpp
 
 D:/programming/cpp/alphav3/components/validator/validator.hpp
 vector

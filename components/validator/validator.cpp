@@ -1,20 +1,21 @@
 #include "validator.hpp"
 
-void validate(std::vector<Token> tokens, std::map<std::string, std::vector<std::vector<alph_TokenType>>> argData)
+void validate(std::vector<Token>& tokens, std::map<std::string, std::vector<std::vector<alph_TokenType>>> argData)
 {
     unsigned int i = 0;
     while (i < tokens.size()-1)
     {
-        Token command = tokens[i];
-        std::vector<Token> arguments;
+        Token& command = tokens[i];
+
         i++;
-        while(i < tokens.size() && tokens[i].type != alph_command)
-            arguments.push_back(tokens[i++]);
+        while(i < tokens.size() && tokens[i].type != alph_command) {
+            command.arguments.push_back(tokens[i++]);
+        }
 
         // check argument count
-        if (arguments.size() != argData[command.value].size()){
+        if (command.arguments.size() != argData[command.value].size()){
             std::string errorMsg;
-            if (arguments.size() > argData[command.value].size()) {
+            if (command.arguments.size() > argData[command.value].size()) {
                 errorMsg += "[ERROR 100] command \"";
                 errorMsg += command.value += "\", on line ";
                 errorMsg += std::to_string(command.lineFound) += " has too many arguments";
@@ -28,7 +29,7 @@ void validate(std::vector<Token> tokens, std::map<std::string, std::vector<std::
 
         // check argument type
         int argi = 0;
-        for (const auto arg : arguments){
+        for (const auto arg : command.arguments){
             std::vector<alph_TokenType> allowedArgs = argData[command.value][argi++];
             if (std::find(allowedArgs.begin(), allowedArgs.end(), arg.type) == allowedArgs.end()){
                 std::string errorMsg;

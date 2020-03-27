@@ -6,6 +6,7 @@
 #include <map>
 #include <string>
 #include <functional>
+#include <iostream>
 
 #include "../tokenSys/tokenSys.hpp"
 

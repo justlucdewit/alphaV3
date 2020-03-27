@@ -1,5 +1,5 @@
 #pragma once
-
+#include <vector>
 /*
  * TokenType is typed enumeration that keeps track
  * of what type a token is, this is only used for checking
@@ -25,6 +25,7 @@ struct Token
     std::string value;
     alph_TokenType type;
     unsigned int lineFound;
+    std::vector<Token> arguments;
     Token();
     Token(std::string);
 };
