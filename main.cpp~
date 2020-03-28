@@ -24,7 +24,7 @@
 	based on the arguments passed
 */
 
-#define VERSION "alpha CLI v3.0.2"
+#define VERSION "alpha CLI v3.0.0"
 
 int main(int argc, char** argv)
 {
