@@ -1,6 +1,6 @@
 #pragma once
 
-#define ARGUMENTS std::vector<Token>, unsigned int&, std::map<std::string, int>
+#define ARGUMENTS const std::vector<Token>&, unsigned int&, std::map<std::string, int>&
 
 #include <vector>
 #include <map>

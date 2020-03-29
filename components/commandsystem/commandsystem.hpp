@@ -10,7 +10,7 @@
 #include "../variableSystem/variableSyste.hpp"
 #include "../errorSys/errorSys.hpp"
 
-#define ARGUMENTS std::vector<Token> arguments, unsigned int& lineNumber, std::map<std::string, int> markerMemory
+#define ARGUMENTS const std::vector<Token>& arguments, unsigned int& lineNumber, std::map<std::string, int>& markerMemory
 
 std::map<std::string, std::vector<std::vector<alph_TokenType>>> argData;// list of arguments used by commands
 std::map<std::string, Var> memory;
@@ -34,13 +34,13 @@ void initCommands(){
 
     functions["print"] = [](ARGUMENTS){
         if (arguments[0].type == alph_string || arguments[0].type == alph_number){
-            std::cout << arguments[0].value;
+            std::cout << arguments[0].value << std::flush;
         }else{//its a variable
             testVar(arguments[0].value);
             if (memory[arguments[0].value].isNum){
-                std::cout << memory[arguments[0].value].numVal;
+                std::cout << memory[arguments[0].value].numVal << std::flush;
             }else{
-                std::cout << memory[arguments[0].value].strVal;
+                std::cout << memory[arguments[0].value].strVal << std::flush;
             }
         }
     };
