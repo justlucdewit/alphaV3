@@ -58,7 +58,6 @@ void typeIdentifier(std::vector<Token>& tokens, std::map<std::string, std::vecto
 {
     for (auto& t : tokens)
     {
-        std::cout << "now at " << t.value << "\n";
         t.type = alph_variable;
 
         if (isNumber(t.value))

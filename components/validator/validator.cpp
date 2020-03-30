@@ -46,9 +46,10 @@ void validate(std::vector<Token>& tokens, std::map<std::string, std::vector<std:
                     errorMsg += std::to_string(argi) += "th";
                     errorMsg += " argument of command ";
                 }
-
                 errorMsg += command.value;
-
+                errorMsg += " on line ";
+                errorMsg += std::to_string(command.lineFound);
+                errorMsg += "\n";
                 throwError(errorMsg);
             }
         }

@@ -28,6 +28,7 @@
 
 int main(int argc, char** argv)
 {
+    bool debug = true;
     std::ios_base::sync_with_stdio(false);
     if (argc >= 2)
 	{//assume the argument is a file name to be ran
@@ -36,11 +37,16 @@ int main(int argc, char** argv)
 
         //extract the source code from the file
 		std::string sourceCode = fileReader(argv[1]);
-        std::cout << "test";
 
 		//split the source code into tokens according to spaces and strings
         std::vector<Token> tokens = tokenSplitter(sourceCode);
-
+//        int i = 0;
+//        for (const auto& token : tokens){
+//            if (i > 9999)
+//                break;
+//            printToken(token);
+//            i++;
+//        }
 
         //read the tokens and assign a type
         typeIdentifier(tokens, argData);

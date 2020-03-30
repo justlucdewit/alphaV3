@@ -18,11 +18,11 @@ std::map<std::string, int> extractMarkers(std::vector<Token>& tokens)
         i++;
     }
 
-    for (auto& t : tokens)
-    {
-        if (t.type == alph_variable && markerMemory.count(t.value))
-            t.type = alph_marker;
-    }
+//    for (auto& t : tokens)
+//    {
+//        if (t.type == alph_variable && markerMemory.count(t.value))
+//            t.type = alph_marker;
+//    }
 
     offset = 0;
     for (const auto& j : toBeRemoved){

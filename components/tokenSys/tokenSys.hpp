@@ -24,7 +24,7 @@ struct Token
 {
     std::string value;
     alph_TokenType type;
-    unsigned int lineFound;
+    unsigned int lineFound = 0;
     std::vector<Token> arguments;
     Token();
     Token(std::string);

@@ -55,10 +55,12 @@ std::vector<Token> tokenSplitter(std::string sourceCode)
                     stringMode = 1;
                     tempstring += c;
                 } else if (CharIsEmpty(c)) {
-                    Token newToken = Token(tempstring);
-                    newToken.lineFound = lineNr;
-                    tokens.push_back(newToken);
-                    tempstring = "";
+                    if (tempstring != "") {
+                        Token newToken = Token(tempstring);
+                        newToken.lineFound = lineNr;
+                        tokens.push_back(newToken);
+                        tempstring = "";
+                    }
                 } else {
                     tempstring += c;
                 }

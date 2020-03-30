@@ -17,10 +17,10 @@ std::map<std::string, Var> memory;
 
 std::map<std::string, std::function<void(ARGUMENTS)>> functions;
 
-void testVar(const std::string s){
-    if(!memory.count(s)){
+void testVar(const std::string string){
+    if(!memory.count(string)){
         std::string errorMsg =  "undefined variable ";
-        errorMsg+=s;
+        errorMsg+=string;
         throwError(errorMsg);
     }
 }
@@ -30,20 +30,164 @@ void initCommands(){
     argData["print"] = {{alph_number, alph_string, alph_variable}};
     argData["let"] = {{alph_variable},{alph_number, alph_string, alph_variable}};
     argData["less"] = {{alph_variable}};
-    argData["goto"] = {{alph_marker}};
+    argData["exit"] = {{alph_number, alph_variable}};
+    argData["goto"] = {{alph_variable}};
+    argData["add"] = {{alph_variable}, {alph_number, alph_variable}};
+    argData["sub"] = {{alph_variable}, {alph_number, alph_variable}};
+    argData["div"] = {{alph_variable}, {alph_number, alph_variable}};
+    argData["mul"] = {{alph_variable}, {alph_number, alph_variable}};
+    argData["gotoiflss"] = {{alph_variable, alph_number}, {alph_variable, alph_number}, {alph_variable}};
+    argData["gotoifgtr"] = {{alph_variable, alph_number}, {alph_variable, alph_number}, {alph_variable}};
+
+    functions["exit"] = [](ARGUMENTS){
+        if (arguments[0].type == alph_variable){
+            testVar(arguments[0].value);
+            if (!memory[arguments[0].value].isNum){
+                throwError("[ERROR 404] cannot exit with a string value");
+            }
+            std::exit((int) memory[arguments[0].value].numVal);
+        }else{
+            std::exit(std::stoi(arguments[0].value));
+        }
+    };
+
+    functions["gotoiflss"] = [](ARGUMENTS){
+        double v1, v2;
+
+        if(arguments[0].type == alph_variable){
+            testVar(arguments[0].value);
+            if (!memory[arguments[0].value].isNum)
+                throwError("error[403] can not do math with string variable");
+            v1 = memory[arguments[0].value].numVal;
+        }else{
+            v1 = std::stod(arguments[0].value);
+        }
+
+        if(arguments[1].type == alph_variable){
+            testVar(arguments[1].value);
+            if (!memory[arguments[1].value].isNum)
+                throwError("error[403] can not do math with string variable");
+            v2 = memory[arguments[1].value].numVal;
+        }else{
+            v2 = std::stod(arguments[1].value);
+        }
+
+        if (v1 < v2){
+            lineNumber = markerMemory[arguments[2].value];
+        }
+    };
+
+    functions["gotoifgtr"] = [](ARGUMENTS){
+        double v1, v2;
+
+        if(arguments[0].type == alph_variable){
+            testVar(arguments[0].value);
+            if (!memory[arguments[0].value].isNum)
+                throwError("error[403] can not do math with string variable");
+            v1 = memory[arguments[0].value].numVal;
+        }else{
+            v1 = std::stod(arguments[0].value);
+        }
+
+        if(arguments[1].type == alph_variable){
+            testVar(arguments[1].value);
+            if (!memory[arguments[1].value].isNum)
+                throwError("error[403] can not do math with string variable");
+            v2 = memory[arguments[1].value].numVal;
+        }else{
+            v2 = std::stod(arguments[1].value);
+        }
+
+        if (v1 > v2){
+            lineNumber = markerMemory[arguments[2].value];
+        }
+    };
+
+    functions["add"] = [](ARGUMENTS){
+        testVar(arguments[0].value);
+
+        if (!memory[arguments[0].value].isNum)
+            throwError("error[403] can not do math with string variable");
+
+        if(arguments[1].type == alph_variable){
+            testVar(arguments[1].value);
+
+            if (!memory[arguments[1].value].isNum)
+                throwError("error[403] can not do math with string variable");
+
+            memory[arguments[0].value].numVal += memory[arguments[1].value].numVal;
+        }else{
+            memory[arguments[0].value].numVal += std::stod(arguments[1].value);
+        }
+    };
+
+    functions["sub"] = [](ARGUMENTS){
+        testVar(arguments[0].value);
+
+        if (!memory[arguments[0].value].isNum)
+            throwError("error[403] can not do math with string variable");
+
+        if(arguments[1].type == alph_variable){
+            testVar(arguments[1].value);
+
+            if (!memory[arguments[1].value].isNum)
+                throwError("error[403] can not do math with string variable");
+
+            memory[arguments[0].value].numVal -= memory[arguments[1].value].numVal;
+        }else{
+            memory[arguments[0].value].numVal -= std::stod(arguments[1].value);
+        }
+    };
+
+    functions["div"] = [](ARGUMENTS){
+        testVar(arguments[0].value);
+
+        if (!memory[arguments[0].value].isNum)
+            throwError("error[403] can not do math with string variable");
+
+        if(arguments[1].type == alph_variable){
+            testVar(arguments[1].value);
+
+            if (!memory[arguments[1].value].isNum)
+                throwError("error[403] can not do math with string variable");
+
+            memory[arguments[0].value].numVal /= memory[arguments[1].value].numVal;
+        }else{
+            memory[arguments[0].value].numVal /= std::stod(arguments[1].value);
+        }
+    };
+
+    functions["mul"] = [](ARGUMENTS){
+        testVar(arguments[0].value);
+
+        if (!memory[arguments[0].value].isNum)
+            throwError("error[403] can not do math with string variable");
+
+        if(arguments[1].type == alph_variable){
+            testVar(arguments[1].value);
+
+            if (!memory[arguments[1].value].isNum)
+                throwError("error[403] can not do math with string variable");
+
+            memory[arguments[0].value].numVal *= memory[arguments[1].value].numVal;
+        }else{
+            memory[arguments[0].value].numVal *= std::stod(arguments[1].value);
+        }
+    };
 
     functions["print"] = [](ARGUMENTS){
-        if (arguments[0].type == alph_string || arguments[0].type == alph_number){
-            std::cout << arguments[0].value << std::flush;
-        }else{//its a variable
+        if (arguments[0].type == alph_variable){
             testVar(arguments[0].value);
             if (memory[arguments[0].value].isNum){
                 std::cout << memory[arguments[0].value].numVal << std::flush;
-            }else{
+            }else {
                 std::cout << memory[arguments[0].value].strVal << std::flush;
             }
+        }else{//its a number, or a string, so just print the value
+            std::cout << arguments[0].value << std::flush;
         }
     };
+
 
     functions["goto"] = [](ARGUMENTS){
         lineNumber = markerMemory[arguments[0].value];
@@ -78,7 +222,7 @@ void initCommands(){
         if (memory[arguments[0].value].isNum)
             memory[arguments[0].value].numVal++;
         else
-            std::cout << "error[400] can not increment string value";
+            throwError("error[400] can not increment string value");
     };
 
     functions["less"] = [](ARGUMENTS){
@@ -87,6 +231,6 @@ void initCommands(){
         if (memory[arguments[0].value].isNum)
             memory[arguments[0].value].numVal--;
         else
-            std::cout << "error[400] can not increment string value";
+            throwError("error[401] can not decrement string value");
     };
 }

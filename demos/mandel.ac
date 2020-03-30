@@ -1,0 +1,55 @@
+let maxitter 16
+let real -2
+let imag -2
+:drawMandelbrot
+    :nextCol
+        :nextRow
+            goto printnum
+            :back
+            add real 0.025
+        gotoiflss real 2 nextRow
+        let real -2
+        add imag 0.1
+        print "\n"
+        print imag
+        print "\n"
+        gotoiflss imag 2 nextCol
+exit 0
+:printnum
+let i 0
+let z 0
+let nextreal 0
+let nextimag 0
+add nextreal real
+add nextimag imag
+:comptest_loop
+let aa 0
+add aa nextreal
+mul aa aa
+let subaa 0
+add subaa nextimag
+mul subaa subaa
+sub aa subaa
+let bb 2
+mul bb nextimag
+mul bb nextreal
+let nextreal 0
+add nextreal aa
+add nextreal real
+let nextimag 0
+add nextimag bb
+add nextimag imag
+let magnitude 0
+add magnitude nextreal
+add magnitude nextimag
+gotoifgtr magnitude 16 printfilled
+gotoiflss magnitude -16 printfilled
+more i
+gotoiflss i maxitter comptest_loop
+goto printspace
+:printfilled
+print "#"
+goto back
+:printspace
+print "-"
+goto back

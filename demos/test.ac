@@ -1,6 +1,5 @@
-let n 1
-:loop
-print n
+goto nextcol
 print "\n"
-more n
-goto loop
+:othermarker
+:nextcol
+print "another thing"
