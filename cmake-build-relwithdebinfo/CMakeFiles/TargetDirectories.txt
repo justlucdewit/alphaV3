@@ -1,3 +1,0 @@
-D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/Alpha.dir
-D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/edit_cache.dir
-D:/programming/cpp/alphav3/cmake-build-relwithdebinfo/CMakeFiles/rebuild_cache.dir
