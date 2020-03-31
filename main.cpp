@@ -40,6 +40,16 @@ int main(int argc, char** argv)
 
 		//split the source code into tokens according to spaces and strings
         std::vector<Token> tokens = tokenSplitter(sourceCode);
+
+        //read the tokens and assign a type
+        typeIdentifier(tokens, argData);
+
+        //remove tokens from source code, and store them in token memory
+        std::cout << "test2";
+        std::map<std::string, int> markerMemory = extractMarkers(tokens);
+
+        //validate the token, throw error if error found
+        validate(tokens, argData);
 //        int i = 0;
 //        for (const auto& token : tokens){
 //            if (i > 9999)
@@ -47,16 +57,6 @@ int main(int argc, char** argv)
 //            printToken(token);
 //            i++;
 //        }
-
-        //read the tokens and assign a type
-        typeIdentifier(tokens, argData);
-
-        //remove tokens from source code, and store them in token memory
-        std::map<std::string, int> markerMemory = extractMarkers(tokens);
-
-        //validate the token, throw error if error found
-        validate(tokens, argData);
-
         //run the code
         interpret(tokens, functions, markerMemory);
     }

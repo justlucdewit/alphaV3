@@ -1,59 +1,83 @@
-let maxitter 16
-let real -2
-let imag -1.2
+#main settings
+let maxitter 100
+let asciiWidth 919 # 250
+let asciiHeight 200 # 73
+
+#positional settings
+let x 0
+let y 0
+let zoom 1
+
+#setting caluculation
+
+let minx x
+let maxx x
+sub minx zoom
+add maxx zoom
+
+let miny y
+let maxy y
+sub miny zoom
+add maxy zoom
+
+let dx zoom
+mul dx 2
+div dx asciiWidth
+
+let dy zoom
+mul dy 2
+div dy asciiHeight
+
+#main loop
+let real minx
+let imag miny
 :drawMandelbrot
 :nextCol
 :nextRow
 goto printnum
 :back
-add real 0.018
-gotoiflss real 0.8 nextRow
-let real -2
-add imag 0.055
+add real dx
+gotoiflss real maxx nextRow
+let real minx
+add imag dy
 print "\n"
-gotoiflss imag 1.2 nextCol
+gotoiflss imag maxy nextCol
 exit 0
+
+#calculation per cell
 :printnum
 let i 0
 let z 0
-let nextreal 0
-let nextimag 0
-add nextreal real
-add nextimag imag
+let nextreal real
+let nextimag imag
 :comptest_loop
-let aa 0
-add aa nextreal
+let aa nextreal
 mul aa aa
-let subaa 0
-add subaa nextimag
+let subaa nextimag
 mul subaa subaa
 sub aa subaa
 let bb 2
 mul bb nextimag
 mul bb nextreal
-let nextreal 0
-add nextreal aa
+let nextreal aa
 add nextreal real
-let nextimag 0
-add nextimag bb
+let nextimag bb
 add nextimag imag
-let magnitude 0
-add magnitude nextreal
+let magnitude nextreal
 add magnitude nextimag
 gotoifgtr magnitude 16 printfilled
 gotoiflss magnitude -16 printfilled
 more i
 gotoiflss i maxitter comptest_loop
 goto printspace
-:printfilled
-print "#"
-goto back
-:printspace
-print "-"
-goto back
-exit 1
-print "spam"
-print "spam"
-print "spam"
-print "spam"
 
+#print functions
+:printfilled
+print "@"
+goto back
+
+:printspace
+print " "
+goto back
+
+exit 1

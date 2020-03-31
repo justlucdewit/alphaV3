@@ -17,9 +17,17 @@ std::map<std::string, Var> memory;
 
 std::map<std::string, std::function<void(ARGUMENTS)>> functions;
 
-void testVar(const std::string string){
+void testVar(const std::string string, std::map<std::string, Var>& memory){
     if(!memory.count(string)){
-        std::string errorMsg =  "undefined variable ";
+        std::string errorMsg =  "[ERROR] undefined variable ";
+        errorMsg+=string;
+        throwError(errorMsg);
+    }
+}
+
+void testMark(const std::string string, std::map<std::string, int>& markerMemory){
+    if(!markerMemory.count(string)){
+        std::string errorMsg =  "[ERROR] undefined marker ";
         errorMsg+=string;
         throwError(errorMsg);
     }
@@ -41,7 +49,7 @@ void initCommands(){
 
     functions["exit"] = [](ARGUMENTS){
         if (arguments[0].type == alph_variable){
-            testVar(arguments[0].value);
+            testVar(arguments[0].value, memory);
             if (!memory[arguments[0].value].isNum){
                 throwError("[ERROR 404] cannot exit with a string value");
             }
@@ -55,7 +63,7 @@ void initCommands(){
         double v1, v2;
 
         if(arguments[0].type == alph_variable){
-            testVar(arguments[0].value);
+            testVar(arguments[0].value, memory);
             if (!memory[arguments[0].value].isNum)
                 throwError("error[403] can not do math with string variable");
             v1 = memory[arguments[0].value].numVal;
@@ -64,7 +72,7 @@ void initCommands(){
         }
 
         if(arguments[1].type == alph_variable){
-            testVar(arguments[1].value);
+            testVar(arguments[1].value, memory);
             if (!memory[arguments[1].value].isNum)
                 throwError("error[403] can not do math with string variable");
             v2 = memory[arguments[1].value].numVal;
@@ -81,7 +89,7 @@ void initCommands(){
         double v1, v2;
 
         if(arguments[0].type == alph_variable){
-            testVar(arguments[0].value);
+            testVar(arguments[0].value, memory);
             if (!memory[arguments[0].value].isNum)
                 throwError("error[403] can not do math with string variable");
             v1 = memory[arguments[0].value].numVal;
@@ -90,7 +98,7 @@ void initCommands(){
         }
 
         if(arguments[1].type == alph_variable){
-            testVar(arguments[1].value);
+            testVar(arguments[1].value, memory);
             if (!memory[arguments[1].value].isNum)
                 throwError("error[403] can not do math with string variable");
             v2 = memory[arguments[1].value].numVal;
@@ -104,13 +112,13 @@ void initCommands(){
     };
 
     functions["add"] = [](ARGUMENTS){
-        testVar(arguments[0].value);
+        testVar(arguments[0].value, memory);
 
         if (!memory[arguments[0].value].isNum)
             throwError("error[403] can not do math with string variable");
 
         if(arguments[1].type == alph_variable){
-            testVar(arguments[1].value);
+            testVar(arguments[1].value, memory);
 
             if (!memory[arguments[1].value].isNum)
                 throwError("error[403] can not do math with string variable");
@@ -122,13 +130,13 @@ void initCommands(){
     };
 
     functions["sub"] = [](ARGUMENTS){
-        testVar(arguments[0].value);
+        testVar(arguments[0].value, memory);
 
         if (!memory[arguments[0].value].isNum)
             throwError("error[403] can not do math with string variable");
 
         if(arguments[1].type == alph_variable){
-            testVar(arguments[1].value);
+            testVar(arguments[1].value, memory);
 
             if (!memory[arguments[1].value].isNum)
                 throwError("error[403] can not do math with string variable");
@@ -140,13 +148,13 @@ void initCommands(){
     };
 
     functions["div"] = [](ARGUMENTS){
-        testVar(arguments[0].value);
+        testVar(arguments[0].value, memory);
 
         if (!memory[arguments[0].value].isNum)
             throwError("error[403] can not do math with string variable");
 
         if(arguments[1].type == alph_variable){
-            testVar(arguments[1].value);
+            testVar(arguments[1].value, memory);
 
             if (!memory[arguments[1].value].isNum)
                 throwError("error[403] can not do math with string variable");
@@ -158,13 +166,13 @@ void initCommands(){
     };
 
     functions["mul"] = [](ARGUMENTS){
-        testVar(arguments[0].value);
+        testVar(arguments[0].value, memory);
 
         if (!memory[arguments[0].value].isNum)
             throwError("error[403] can not do math with string variable");
 
         if(arguments[1].type == alph_variable){
-            testVar(arguments[1].value);
+            testVar(arguments[1].value, memory);
 
             if (!memory[arguments[1].value].isNum)
                 throwError("error[403] can not do math with string variable");
@@ -177,7 +185,7 @@ void initCommands(){
 
     functions["print"] = [](ARGUMENTS){
         if (arguments[0].type == alph_variable){
-            testVar(arguments[0].value);
+            testVar(arguments[0].value, memory);
             if (memory[arguments[0].value].isNum){
                 std::cout << memory[arguments[0].value].numVal << std::flush;
             }else {
@@ -190,6 +198,7 @@ void initCommands(){
 
 
     functions["goto"] = [](ARGUMENTS){
+        testMark(arguments[0].value, markerMemory);
         lineNumber = markerMemory[arguments[0].value];
     };
 
@@ -204,7 +213,7 @@ void initCommands(){
             newvar.isNum = false;
             memory[arguments[0].value] = newvar;
         }else if (arguments[1].type == alph_variable){
-            testVar(arguments[1].value);
+            testVar(arguments[1].value, memory);
             if (memory[arguments[1].value].isNum){
                 newvar.isNum = true;
                 newvar.numVal = memory[arguments[1].value].numVal;
@@ -217,7 +226,7 @@ void initCommands(){
     };
 
     functions["more"] = [](ARGUMENTS){
-        testVar(arguments[0].value);
+        testVar(arguments[0].value, memory);
 
         if (memory[arguments[0].value].isNum)
             memory[arguments[0].value].numVal++;
@@ -226,7 +235,7 @@ void initCommands(){
     };
 
     functions["less"] = [](ARGUMENTS){
-        testVar(arguments[0].value);
+        testVar(arguments[0].value, memory);
 
         if (memory[arguments[0].value].isNum)
             memory[arguments[0].value].numVal--;
