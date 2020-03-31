@@ -1,5 +1,73 @@
-goto nextcol
+let maxitter 16
+let real -2
+let imag -12
+div imag 10
+:nextCol
+print ""
+:nextRow
+goto printnum
+:back
+
+let newthing 18
+div newthing 1000
+add real newthing
+
+let numa 8
+div numa 5
+gotoifislss real numa nextRow
+let real -2
+let numb 55
+div numb 1000
+add imag numb
 print "\n"
-:othermarker
-:nextcol
-print "another thing"
+let numc 12
+div numc 12
+gotoifislss imag numc nextCol
+print "\n"
+exit 0
+
+
+
+:printnum
+let i 0
+let z 0
+let nextreal 0
+let nextimag 0
+add nextreal real
+add nextimag imag
+:comptest_loop
+let aa 0
+add aa nextreal
+mul aa aa
+let subaa 0
+add subaa nextimag
+mul subaa subaa
+sub aa subaa
+let bb 2
+mul bb nextimag
+mul bb nextreal
+let nextreal 0
+add nextreal aa
+add nextreal real
+let nextimag 0
+add nextimag bb
+add nextimag imag
+let magnitude 0
+add magnitude nextreal
+add magnitude nextimag
+gotoifisgtr magnitude 16 printfilled
+gotoifislss magnitude -16 printfilled
+more i
+gotoifislss i maxitter comptest_loop
+goto printspace
+:printfilled
+print "#"
+goto back
+:printspace
+print "-"
+goto back
+exit 1
+print "spam"
+print "spam"
+print "spam"
+print "spam"
