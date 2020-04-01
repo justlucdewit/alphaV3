@@ -24,7 +24,7 @@
 	based on the arguments passed
 */
 
-#define VERSION "alpha CLI v3.0.2"
+#define VERSION "alpha CLI v3.0.3"
 
 int main(int argc, char** argv)
 {
@@ -47,7 +47,6 @@ int main(int argc, char** argv)
         typeIdentifier(tokens, argData);
 
         //remove tokens from source code, and store them in token memory
-        std::cout << "test2";
         std::map<std::string, int> markerMemory = extractMarkers(tokens);
 
         //validate the token, throw error if error found
