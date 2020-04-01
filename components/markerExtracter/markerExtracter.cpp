@@ -14,17 +14,13 @@ std::map<std::string, int> extractMarkers(std::vector<Token>& tokens)
         {
             //std::cout << "[debug] found marker named " << t.value << ", must be deleted at index " << i << "\n";
             markerMemory[t.value.substr(1, t.value.size()-1)] = i-offset;
-            toBeRemoved.push_back(i);
-            offset++;
+            toBeRemoved.push_back(i-offset++);
         }
         i++;
     }
 
-    offset = 0;
     for (const auto& j : toBeRemoved){
-
-        tokens.erase(tokens.begin()+(j-offset));
-        offset++;
+        tokens.erase(tokens.begin()+j);
     }
 
     return markerMemory;

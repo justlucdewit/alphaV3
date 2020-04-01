@@ -32,50 +32,50 @@ div dy asciiHeight
 let real minx# main loop
 let imag miny
 :drawMandelbrot
-:nextCol
-:nextRow
-goto printnum
-:back
-add real dx
-gotoiflss real maxx nextRow
-let real minx
-add imag dy
-print "\n"
-gotoiflss imag maxy nextCol
+    :nextCol
+        :nextRow
+        goto printnum
+        :back
+        add real dx
+        gotoiflss real maxx nextRow
+        let real minx
+        add imag dy
+        print "\n"
+        gotoiflss imag maxy nextCol
 exit 0
 
 # calculation per cell
 :printnum
-let i 0
-let z 0
-let nextreal real
-let nextimag imag
-:comptest_loop
-let aa nextreal
-mul aa aa
-let subaa nextimag
-mul subaa subaa
-sub aa subaa
-let bb 2
-mul bb nextimag
-mul bb nextreal
-let nextreal aa
-add nextreal real
-let nextimag bb
-add nextimag imag
-let magnitude nextreal
-add magnitude nextimag
-gotoifgtr magnitude 16 printfilled
-gotoiflss magnitude -16 printfilled
-more i
-gotoiflss i maxitter comptest_loop
-goto printspace
+    let i 0
+    let z 0
+    let nextreal real
+    let nextimag imag
+    :comptest_loop
+        let aa nextreal
+        mul aa aa
+        let subaa nextimag
+        mul subaa subaa
+        sub aa subaa
+        let bb 2
+        mul bb nextimag
+        mul bb nextreal
+        let nextreal aa
+        add nextreal real
+        let nextimag bb
+        add nextimag imag
+        let magnitude nextreal
+        add magnitude nextimag
+    gotoifgtr magnitude 16 printfilled
+    gotoiflss magnitude -16 printfilled
+    more i
+    gotoiflss i maxitter comptest_loop
+    goto printspace
 
 # print functions
 :printfilled
-print "@"
-goto back
+    print "@"
+    goto back
 
 :printspace
-print " "
-goto back
+    print " "
+    goto back

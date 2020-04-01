@@ -35,12 +35,14 @@ int main(int argc, char** argv)
         //define the command functions
         initCommands();
 
-        //extract the source code from the file
-		std::string sourceCode = fileReader(argv[1]);
+        std::vector<Token> tokens;
+        {
+            //extract the source code from the file
+            std::string sourceCode = fileReader(argv[1]);
 
-		//split the source code into tokens according to spaces and strings
-        std::vector<Token> tokens = tokenSplitter(sourceCode);
-
+            //split the source code into tokens according to spaces and strings
+            tokens = tokenSplitter(sourceCode);
+        }
         //read the tokens and assign a type
         typeIdentifier(tokens, argData);
 
@@ -57,6 +59,8 @@ int main(int argc, char** argv)
 //            printToken(token);
 //            i++;
 //        }
+
+
         //run the code
         interpret(tokens, functions, markerMemory);
     }
