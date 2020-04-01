@@ -45,6 +45,14 @@ std::vector<Token> tokenSplitter(std::string sourceCode)
             }else {
                 if (c == '#') {
                     commentMode = true;
+
+                    if (tempstring != "") {
+                        Token newToken = Token(tempstring);
+                        newToken.lineFound = lineNr;
+                        tokens.push_back(newToken);
+                        tempstring = "";
+                    }
+
                     continue;
                 }
 

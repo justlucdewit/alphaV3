@@ -12,7 +12,7 @@ std::map<std::string, int> extractMarkers(std::vector<Token>& tokens)
     {
         if (t.type == alph_marker)
         {
-            std::cout << "[debug] found marker named " << t.value << ", must be deleted at index " << i << "\n";
+            //std::cout << "[debug] found marker named " << t.value << ", must be deleted at index " << i << "\n";
             markerMemory[t.value.substr(1, t.value.size()-1)] = i-offset;
             toBeRemoved.push_back(i);
             offset++;
