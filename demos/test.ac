@@ -1,14 +1,14 @@
-#main settings
+# main settings
 let maxitter 100
-let asciiWidth 919 # 250
-let asciiHeight 200 # 73
+let asciiWidth 10 # 250
+let asciiHeight 10 # 73
 
-#positional settings
+# positional settings
 let x 0
 let y 0
 let zoom 1
 
-#setting caluculation
+# setting caluculation
 
 let minx x
 let maxx x
@@ -28,8 +28,8 @@ let dy zoom
 mul dy 2
 div dy asciiHeight
 
-#main loop
-let real minx
+
+let real minx#main loop
 let imag miny
 :drawMandelbrot
 :nextCol
@@ -44,7 +44,7 @@ print "\n"
 gotoiflss imag maxy nextCol
 exit 0
 
-#calculation per cell
+# calculation per cell
 :printnum
 let i 0
 let z 0
@@ -71,7 +71,7 @@ more i
 gotoiflss i maxitter comptest_loop
 goto printspace
 
-#print functions
+# print functions
 :printfilled
 print "@"
 goto back
