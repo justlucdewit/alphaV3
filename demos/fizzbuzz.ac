@@ -1,4 +1,4 @@
-let num 1
+let number 1
 let printed 0
 
 :mainLoop
@@ -6,7 +6,7 @@ let printed 0
     :back
     let printed 0
     print "\n"
-    more num
+    more number
 goto mainLoop
 
 exit 0
@@ -20,21 +20,21 @@ exit 0
     print "buzz"
     goto back
 
-:num
-    print num
+:number
+    print number
     goto back
 
 :fizzBuzz
-    let cpy num
+    let cpy number
     mod cpy 3
     gotoifis cpy 0 fizz
 
     :continue
 
-    let cpy num
+    let cpy number
     mod cpy 5
     gotoifis cpy 0 buzz
 
     gotoifis printed 1 back
 
-    goto num
+    goto number

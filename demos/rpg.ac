@@ -1,0 +1,39 @@
+print "welcome dear hero!\nhow would you like us to call you: "
+get name
+print "\n"
+
+# the player is at home, pick a random number to play the situation 
+# that belongs to that case
+rand situation
+mul situation 3
+round situation
+
+gotoifis situation 0 homeSituation0
+gotoifis situation 1 homeSituation1
+gotoifis situation 2 homeSituation2
+gotoifis situation 3 homeSituation3
+
+
+:homeSituation0
+	print " > you are sitting at your cozy home, sitting in your old cozy chair\n\n"
+goto homeOptionMenu
+
+:homeSituation1
+	print " > you are at home, playing with you're dog\n\n"
+goto homeOptionMenu
+
+:homeSituation2
+	print " > you are at home, and just finished eating\n\n"
+goto homeOptionMenu
+
+:homeSituation3
+	print " > you are at home, being bored\n\n"
+goto homeOptionMenu
+
+
+:homeOptionMenu
+print "you decide, to stretch you leggs. what will you do: \n"
+print "1) go look around in the wild, looking for an adventure\n"
+print "2) take a walk to the shopping area\n"
+
+exit 0

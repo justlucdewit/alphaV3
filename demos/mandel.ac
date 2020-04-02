@@ -1,12 +1,16 @@
 #main settings
-let maxitter 100
-let asciiWidth 919 # 250
-let asciiHeight 200 # 73
+let maxitter 250
+let asciiWidth 250 # 250
+let asciiHeight 125 # 73
+
+# -0.5 0 1.5 (full mandelbrot)
+# -0.7453 -0.1127 0.00065 (spiral)
+# -0.235125 -0.827215 0.00004(crack)
 
 #positional settings
-let x 0
-let y 0
-let zoom 1
+let x -0.235125
+let y -0.827215
+let zoom 0.00004
 
 #setting caluculation
 
@@ -52,9 +56,9 @@ let nextreal real
 let nextimag imag
 :comptest_loop
 let aa nextreal
-mul aa aa
+pow aa 2
 let subaa nextimag
-mul subaa subaa
+pow subaa 2
 sub aa subaa
 let bb 2
 mul bb nextimag
