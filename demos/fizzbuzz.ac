@@ -1,0 +1,40 @@
+let num 1
+let printed 0
+
+:mainLoop
+    goto fizzBuzz
+    :back
+    let printed 0
+    print "\n"
+    more num
+goto mainLoop
+
+exit 0
+
+:fizz
+    print "fizz"
+    let printed 1
+    goto continue
+
+:buzz
+    print "buzz"
+    goto back
+
+:num
+    print num
+    goto back
+
+:fizzBuzz
+    let cpy num
+    mod cpy 3
+    gotoifis cpy 0 fizz
+
+    :continue
+
+    let cpy num
+    mod cpy 5
+    gotoifis cpy 0 buzz
+
+    gotoifis printed 1 back
+
+    goto num

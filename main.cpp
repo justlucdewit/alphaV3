@@ -48,9 +48,6 @@ int main(int argc, char** argv)
 
         //remove tokens from source code, and store them in token memory
         std::map<std::string, int> markerMemory = extractMarkers(tokens);
-
-        //validate the token, throw error if error found
-        validate(tokens, argData);
 //        int i = 0;
 //        for (const auto& token : tokens){
 //            if (i > 9999)
@@ -58,6 +55,9 @@ int main(int argc, char** argv)
 //            printToken(token);
 //            i++;
 //        }
+        //validate the token, throw error if error found
+        validate(tokens, argData);
+
 
 
         //run the code

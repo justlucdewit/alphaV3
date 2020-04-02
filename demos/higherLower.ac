@@ -1,0 +1,25 @@
+rand theNumber
+
+mul theNumber 100
+round theNumber
+
+:again
+    print "guess a number: "
+    get guess
+    num guess
+
+    gotoifgtr guess theNumber toHigh
+    gotoiflss guess theNumber toLow
+
+print "\ncongratualation, the number was "
+print theNumber
+print "\n"
+exit 0
+
+:toLow
+    print "higher\n\n"
+    goto again
+
+:toHigh
+    print "lower\n\n"
+    goto again

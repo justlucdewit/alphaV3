@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <random>
 
 #include "../tokenSys/tokenSys.hpp"
 #include "../variableSystem/variableSyste.hpp"
@@ -34,11 +35,17 @@ void testMark(const std::string string, std::map<std::string, int>& markerMemory
     }
 }
 
+std::random_device rd;
+std::mt19937 gen(rd());
+std::uniform_real_distribution<> dis(0.0, 1.0);
+
 void initCommands(){
     //others
     argData["get"] = {{alph_variable}};
     argData["print"] = {{alph_number, alph_string, alph_variable}};
     argData["let"] = {{alph_variable},{alph_number, alph_string, alph_variable}};
+    argData["num"] = {{alph_variable}};
+    argData["str"] = {{alph_variable}};
 
     // single variable math
     argData["less"] = {{alph_variable}};
@@ -47,6 +54,8 @@ void initCommands(){
     argData["cos"] = {{alph_variable}};
     argData["sin"] = {{alph_variable}};
     argData["tan"] = {{alph_variable}};
+    argData["rand"] = {{alph_variable}};
+    argData["round"] = {{alph_variable}};
 
     // double variable math
     argData["add"] = {{alph_variable}, {alph_number, alph_variable}};
@@ -343,10 +352,42 @@ void initCommands(){
         lineNumber = markerMemory[arguments[0].value];
     };
 
+    functions["rand"] = [](ARGUMENTS){
+        Var newvar;
+        newvar.isNum = true;
+        newvar.numVal = dis(gen);
+        memory[arguments[0].value] = newvar;
+    };
+
+    functions["round"] = [](ARGUMENTS){
+        testVar(arguments[0].value, memory);
+        if (!memory[arguments[0].value].isNum)
+            throwError("[ERROR] cant do math on string variable");
+        memory[arguments[0].value].numVal = std::round(memory[arguments[0].value].numVal);
+    };
+
+    functions["str"] = [](ARGUMENTS){
+        testVar(arguments[0].value, memory);
+        if (!memory[arguments[0].value].isNum)
+            return;
+
+        memory[arguments[0].value].isNum = false;
+        memory[arguments[0].value].strVal = std::to_string(memory[arguments[0].value].numVal);
+    };
+
+    functions["num"] = [](ARGUMENTS){
+        testVar(arguments[0].value, memory);
+        if (memory[arguments[0].value].isNum)
+            return;
+
+        memory[arguments[0].value].isNum = true;
+        memory[arguments[0].value].numVal = std::stod(memory[arguments[0].value].strVal);
+    };
+
     functions["get"] = [](ARGUMENTS){
         Var newvar;
         newvar.isNum = false;
-        std::getline(std::cin, newvar.strVal);
+        std::getline(std::cin,  newvar.strVal);
         memory[arguments[0].value] = newvar;
     };
 
