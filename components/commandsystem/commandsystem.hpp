@@ -7,6 +7,7 @@
 #include <string>
 #include <cmath>
 #include <random>
+#include <fstream>
 
 #include "../tokenSys/tokenSys.hpp"
 #include "../variableSystem/variableSyste.hpp"
@@ -71,7 +72,31 @@ void initCommands(){
     argData["gotoifisnt"] = {{alph_variable, alph_number}, {alph_variable, alph_number}, {alph_variable}};
     argData["gotoiflss"] = {{alph_variable, alph_number}, {alph_variable, alph_number}, {alph_variable}};
     argData["gotoifgtr"] = {{alph_variable, alph_number}, {alph_variable, alph_number}, {alph_variable}};
+    argData["skipifis"] = {{alph_variable, alph_number}, {alph_variable, alph_number}};
+    argData["skipifisnt"] = {{alph_variable, alph_number}, {alph_variable, alph_number}};
+    argData["skipiflss"] = {{alph_variable, alph_number}, {alph_variable, alph_number}};
+    argData["skipifgtr"] = {{alph_variable, alph_number}, {alph_variable, alph_number}};
+
+    argData["fappend"] = {{alph_variable, alph_string}, {alph_variable, alph_string}};
+
+    argData["cat"] = {{alph_variable}, {alph_variable, alph_string}};
+
     argData["exit"] = {{alph_number, alph_variable}};
+
+    functions["cat"] = [](ARGUMENTS){
+        testVar(arguments[0].value, memory);
+        if (arguments[1].type == alph_variable){
+            testVar(arguments[1].value, memory);
+
+            if (memory[arguments[1].value].isNum){
+                memory[arguments[0].value].strVal += std::to_string(memory[arguments[1].value].numVal);
+            }else {
+                memory[arguments[0].value].strVal += memory[arguments[1].value].strVal;
+            }
+        }else{
+            memory[arguments[0].value].strVal += arguments[1].value;
+        }
+    };
 
     functions["exit"] = [](ARGUMENTS){
         if (arguments[0].type == alph_variable){
@@ -186,6 +211,110 @@ void initCommands(){
 
         if (v1 > v2){
             lineNumber = markerMemory[arguments[2].value];
+        }
+    };
+
+    functions["skipifgtr"] = [](ARGUMENTS){
+        double v1, v2;
+
+        if(arguments[0].type == alph_variable){
+            testVar(arguments[0].value, memory);
+            if (!memory[arguments[0].value].isNum)
+                throwError("error[403] can not do math with string variable");
+            v1 = memory[arguments[0].value].numVal;
+        }else{
+            v1 = std::stod(arguments[0].value);
+        }
+
+        if(arguments[1].type == alph_variable){
+            testVar(arguments[1].value, memory);
+            if (!memory[arguments[1].value].isNum)
+                throwError("error[403] can not do math with string variable");
+            v2 = memory[arguments[1].value].numVal;
+        }else{
+            v2 = std::stod(arguments[1].value);
+        }
+
+        if (v1 > v2){
+            lineNumber++;
+        }
+    };
+
+    functions["skipiflss"] = [](ARGUMENTS){
+        double v1, v2;
+
+        if(arguments[0].type == alph_variable){
+            testVar(arguments[0].value, memory);
+            if (!memory[arguments[0].value].isNum)
+                throwError("error[403] can not do math with string variable");
+            v1 = memory[arguments[0].value].numVal;
+        }else{
+            v1 = std::stod(arguments[0].value);
+        }
+
+        if(arguments[1].type == alph_variable){
+            testVar(arguments[1].value, memory);
+            if (!memory[arguments[1].value].isNum)
+                throwError("error[403] can not do math with string variable");
+            v2 = memory[arguments[1].value].numVal;
+        }else{
+            v2 = std::stod(arguments[1].value);
+        }
+
+        if (v1 < v2){
+            lineNumber++;
+        }
+    };
+
+    functions["skipifis"] = [](ARGUMENTS){
+        double v1, v2;
+
+        if(arguments[0].type == alph_variable){
+            testVar(arguments[0].value, memory);
+            if (!memory[arguments[0].value].isNum)
+                throwError("error[403] can not do math with string variable");
+            v1 = memory[arguments[0].value].numVal;
+        }else{
+            v1 = std::stod(arguments[0].value);
+        }
+
+        if(arguments[1].type == alph_variable){
+            testVar(arguments[1].value, memory);
+            if (!memory[arguments[1].value].isNum)
+                throwError("error[403] can not do math with string variable");
+            v2 = memory[arguments[1].value].numVal;
+        }else{
+            v2 = std::stod(arguments[1].value);
+        }
+
+        if (v1 == v2){
+            lineNumber++;
+        }
+    };
+
+    functions["skipifisnt"] = [](ARGUMENTS){
+        double v1, v2;
+
+        if(arguments[0].type == alph_variable){
+            testVar(arguments[0].value, memory);
+            if (!memory[arguments[0].value].isNum)
+                throwError("error[403] can not do math with string variable");
+            v1 = memory[arguments[0].value].numVal;
+        }else{
+            v1 = std::stod(arguments[0].value);
+        }
+
+        if(arguments[1].type == alph_variable){
+            testVar(arguments[1].value, memory);
+            if (!memory[arguments[1].value].isNum)
+                throwError("error[403] can not do math with string variable");
+            v2 = memory[arguments[1].value].numVal;
+        }else{
+            v2 = std::stod(arguments[1].value);
+        }
+
+        if (v1 != v2){
+            lineNumber++;
         }
     };
 
@@ -412,6 +541,27 @@ void initCommands(){
             }
             memory[arguments[0].value] = newvar;
         }
+    };
+
+    functions["fappend"] = [](ARGUMENTS){
+        std::ofstream file;
+        if (arguments[0].type == alph_string) {
+            file.open(arguments[0].value, std::ios::app);
+        }else{
+            testVar(arguments[0].value, memory);
+            if (memory[arguments[0].value].isNum)
+                throwError("[ERROR] files can only have string names");
+            file.open(memory[arguments[0].value].strVal, std::ios::app);
+        }
+
+        if (arguments[1].type == alph_string){
+            file << arguments[1].value;
+        }else{
+            testVar(arguments[1].value, memory);
+            file << memory[arguments[1].value].strVal;
+        }
+
+        file.close();
     };
 
     functions["more"] = [](ARGUMENTS){

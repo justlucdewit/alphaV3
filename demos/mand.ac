@@ -1,6 +1,5 @@
 #main settings
-let saveLocation "frame"
-
+print "test"
 let maxitter 250
 let asciiWidth 250 # 250
 let asciiHeight 125 # 73
@@ -10,15 +9,11 @@ let asciiHeight 125 # 73
 # -0.235125 -0.827215 0.00004(crack)
 
 #positional settings
-let x -0.235125
-let y -0.827215
+let x 0
+let y 0
 let zoom 2
 
 #setting caluculation
-
-let frameCount 1
-
-:reset
 
 let minx x
 let maxx x
@@ -41,7 +36,6 @@ div dy asciiHeight
 #main loop
 let real minx
 let imag miny
-let outstr ""
 :drawMandelbrot
 :nextCol
 :nextRow
@@ -51,18 +45,8 @@ add real dx
 gotoiflss real maxx nextRow
 let real minx
 add imag dy
-cat outstr "\n"
-gotoiflss imag maxy nextCol
-cat saveLocation frameCount
-cat saveLocation ".txt"
-print "saving to "
-print saveLocation
 print "\n"
-fappend saveLocation outstr
-more frameCount
-let saveLocation "frame"
-mul zoom 0.9
-gotoifgtr zoom 0.00004 reset
+gotoiflss imag maxy nextCol
 exit 0
 
 #calculation per cell
@@ -94,11 +78,11 @@ goto printspace
 
 #print functions
 :printfilled
-cat outstr "@"
+print "@"
 goto back
 
 :printspace
-cat outstr " "
+print "."
 goto back
 
 exit 1
