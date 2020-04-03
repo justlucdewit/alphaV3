@@ -7,8 +7,13 @@ void validate(std::vector<Token>& tokens, std::map<std::string, std::vector<std:
     {
         Token& command = tokens[i];
 
+        if (command.type == alph_marker){
+            i++;
+            continue;
+        }
+
         i++;
-        while(i < tokens.size() && tokens[i].type != alph_command) {
+        while(i < tokens.size() && tokens[i].type != alph_command && tokens[i].type != alph_marker) {
             command.arguments.push_back(tokens[i++]);
         }
 

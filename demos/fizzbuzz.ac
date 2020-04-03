@@ -14,7 +14,7 @@ exit 0
 :fizz
     print "fizz"
     let printed 1
-    goto continue
+    goto checkIfBuzz
 
 :buzz
     print "buzz"
@@ -29,7 +29,7 @@ exit 0
     mod cpy 3
     gotoifis cpy 0 fizz
 
-    :continue
+    :checkIfBuzz
 
     let cpy number
     mod cpy 5

@@ -54,7 +54,7 @@ bool isCommand(std::string s, std::map<std::string, std::vector<std::vector<alph
     return commands.find(s) != commands.end();
 }
 
-void typeIdentifier(std::vector<Token>& tokens, std::map<std::string, std::vector<std::vector<alph_TokenType>>> commands)
+void typeIdentifier(std::vector<Token>& tokens, std::map<std::string, std::vector<std::vector<alph_TokenType>>> commands, bool useEscape)
 {
     for (auto& t : tokens)
     {
@@ -79,21 +79,31 @@ void typeIdentifier(std::vector<Token>& tokens, std::map<std::string, std::vecto
             t.value.erase(0, 1);
 
             //replace escape chars
-            t.value = substrReplace(t.value, "\\n", "\n");
-            t.value = substrReplace(t.value, "\\t", "\t");
-            t.value = substrReplace(t.value, "\\a", "\a");
-            t.value = substrReplace(t.value, "\\b", "\b");
-            t.value = substrReplace(t.value, "\\r", "\r");
-            t.value = substrReplace(t.value, "\\v", "\v");
-            t.value = substrReplace(t.value, "\\\\", "\\");
-            t.value = substrReplace(t.value, "\\\'", "\'");
-            t.value = substrReplace(t.value, "\\\"", "\"");
-            t.value = substrReplace(t.value, "\\\'", "\'");
+            if (useEscape) {
+                t.value = substrReplace(t.value, "\\n", "\n");
+                t.value = substrReplace(t.value, "\\t", "\t");
+                t.value = substrReplace(t.value, "\\a", "\a");
+                t.value = substrReplace(t.value, "\\b", "\b");
+                t.value = substrReplace(t.value, "\\r", "\r");
+                t.value = substrReplace(t.value, "\\v", "\v");
+                t.value = substrReplace(t.value, "\\\\", "\\");
+                t.value = substrReplace(t.value, "\\\'", "\'");
+                t.value = substrReplace(t.value, "\\\"", "\"");
+                t.value = substrReplace(t.value, "\\\'", "\'");
+            }
         }
 
         else if(isCommand(t.value, commands))
         {
             t.type = alph_command;
+        }
+
+        if (t.value == "continue"){
+            std::cout << "[ERROR] cannot use continue as variable on line " << t.lineFound-1;
+            std::exit(1);
+        }else if (t.value == "return"){
+            std::cout << "[ERROR] cannot use return as variable on line " << t.lineFound-1;
+            std::exit(1);
         }
     }
 }

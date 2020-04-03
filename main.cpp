@@ -11,6 +11,7 @@
 #include "components/validator/validator.hpp"
 #include "components/commandsystem/commandsystem.hpp"
 #include "components/interpreter/interpreter.hpp"
+#include "components/compiler/compiler.hpp"
 
 /*
 	alpha is the interpreter CLI for the alphacode language
@@ -44,24 +45,26 @@ int main(int argc, char** argv)
             tokens = tokenSplitter(sourceCode);
         }
         //read the tokens and assign a type
-        typeIdentifier(tokens, argData);
+        typeIdentifier(tokens, argData, !(argc >= 3 && strcmp(argv[2], "-c") == 0));
 
         //remove tokens from source code, and store them in token memory
-        std::map<std::string, int> markerMemory = extractMarkers(tokens);
-//        int i = 0;
-//        for (const auto& token : tokens){
-//            if (i > 9999)
-//                break;
-//            printToken(token);
-//            i++;
-//        }
+
         //validate the token, throw error if error found
         validate(tokens, argData);
 
-
-
-        //run the code
-        interpret(tokens, functions, markerMemory);
+        if (argc >= 3 && strcmp(argv[2], "-c") == 0){
+            std::string exename;
+            if (argc >= 4){
+                exename = argv[3];
+            }else{
+                exename = "output.c";
+            }
+            compile(tokens, exename);
+        }else {
+            //run the code
+            std::map<std::string, int> markerMemory = extractMarkers(tokens);
+            interpret(tokens, functions, markerMemory);
+        }
     }
     else
     {//print the version name

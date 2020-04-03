@@ -1,7 +1,2 @@
-print "enter you name: "
-get input
-
-print "hello there "
-print input
-print "!"
-exit 0
+let name "luke"
+let age 18
