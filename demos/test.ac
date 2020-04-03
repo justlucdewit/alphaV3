@@ -1,4 +1,1 @@
-let name "luke"
-cat name " is cool!"
-
-print name
+print "hello world"

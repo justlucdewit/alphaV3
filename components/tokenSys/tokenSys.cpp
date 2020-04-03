@@ -11,13 +11,13 @@
  * the value it will get
  */
 Token::Token(){
-    this->value = "";
-    this->type = alph_undefined;
+    value = "";
+    type = alph_undefined;
 }
 
 Token::Token(std::string str){
-    this->value = str;
-    this->type = alph_undefined;
+    value = str;
+    type = alph_undefined;
 }
 
 
