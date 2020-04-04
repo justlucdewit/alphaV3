@@ -97,13 +97,5 @@ void typeIdentifier(std::vector<Token>& tokens, std::map<std::string, std::vecto
         {
             t.type = alph_command;
         }
-
-        if (t.value == "continue"){
-            std::cout << "[ERROR] cannot use continue as variable on line " << t.lineFound-1;
-            std::exit(1);
-        }else if (t.value == "return"){
-            std::cout << "[ERROR] cannot use return as variable on line " << t.lineFound-1;
-            std::exit(1);
-        }
     }
 }

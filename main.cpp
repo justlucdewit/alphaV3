@@ -36,18 +36,14 @@ int main(int argc, char** argv)
         //define the command functions
         initCommands();
 
-        std::vector<Token> tokens;
-        {
-            //extract the source code from the file
-            std::string sourceCode = fileReader(argv[1]);
+        //extract the source code from the file
+        std::string sourceCode = fileReader(argv[1]);
 
-            //split the source code into tokens according to spaces and strings
-            tokens = tokenSplitter(sourceCode);
-        }
+        //split the source code into tokens according to spaces and strings
+        std::vector<Token> tokens = tokenSplitter(sourceCode);
+
         //read the tokens and assign a type
         typeIdentifier(tokens, argData, !(argc >= 3 && strcmp(argv[2], "-c") == 0));
-
-        //remove tokens from source code, and store them in token memory
 
         //validate the token, throw error if error found
         validate(tokens, argData);
@@ -57,7 +53,7 @@ int main(int argc, char** argv)
             if (argc >= 4){
                 exename = argv[3];
             }else{
-                exename = "output.c";
+                exename = "out.aasm";
             }
             compile(tokens, exename);
         }else {
