@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <cstdio>
 
 #include "../tokenSys/tokenSys.hpp"
 

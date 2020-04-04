@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <fstream>
 
 #include "components/tokenSplitter/tokenSplitter.hpp"
 #include "components/fileReader/fileReader.hpp"
@@ -12,6 +13,7 @@
 #include "components/commandsystem/commandsystem.hpp"
 #include "components/interpreter/interpreter.hpp"
 #include "components/compiler/compiler.hpp"
+#include "components/avm32/avm32.hpp"
 
 /*
 	alpha is the interpreter CLI for the alphacode language
@@ -32,7 +34,28 @@ int main(int argc, char** argv)
     bool debug = true;
     std::ios_base::sync_with_stdio(false);
     if (argc >= 2)
-	{//assume the argument is a file name to be ran
+	{
+        if (strcmp(argv[1], "avm")==0){
+            if (argc >= 3){
+                AVM32 vm;
+                std::fstream file;
+                std::vector<int32_t> prog;
+                file.open(argv[2]);
+
+                std::string word;
+                while(file >> word){
+                    prog.insert(prog.begin(), std::stoi(word, 0, 16));
+                }
+
+                std::cout << prog[0];
+
+                file.close();
+                vm.loadProgram(prog);
+                vm.run();
+            }else{
+                std::cout << "please give a aasm file to be ran in avm";
+            }
+        }
         //define the command functions
         initCommands();
 
