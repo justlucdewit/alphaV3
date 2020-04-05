@@ -12,8 +12,9 @@
  * 11 => undefined
  */
 
-AVM32::AVM32(){
-    memory.resize(1000000);
+AVM32::AVM32(unsigned int programSize, unsigned int stackSize){
+    memory.resize(programSize + stackSize);
+    pc = stackSize;
 }
 
 int32_t AVM32::getType(int32_t instruction) {
@@ -61,19 +62,19 @@ void AVM32::doPrimitive() {
             break;
 
         case 2:// sub
-            std::cout << "add " << memory[sp-1] << " " << memory[sp] << "\n";
+            std::cout << "sub " << memory[sp-1] << " " << memory[sp] << "\n";
             memory[sp-1] = memory[sp-1] - memory[sp];
             sp--;
             break;
 
         case 3:// mul
-            std::cout << "add " << memory[sp-1] << " " << memory[sp] << "\n";
+            std::cout << "mul " << memory[sp-1] << " " << memory[sp] << "\n";
             memory[sp-1] = memory[sp-1] * memory[sp];
             sp--;
             break;
 
         case 4:// div
-            std::cout << "add " << memory[sp-1] << " " << memory[sp] << "\n";
+            std::cout << "div " << memory[sp-1] << " " << memory[sp] << "\n";
             memory[sp-1] = memory[sp-1] / memory[sp];
             sp--;
             break;
@@ -90,7 +91,6 @@ void AVM32::run() {
 }
 
 void AVM32::loadProgram(std::vector<int32_t> prog) {
-    memory[0] = 1;
     for (int32_t i = 0; i < prog.size(); i++){
         memory[pc + i] = prog[i];
     }
