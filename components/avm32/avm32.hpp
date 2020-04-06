@@ -2,12 +2,20 @@
 
 #include <iostream>
 #include <vector>
+namespace AVM{
+    const int32_t EXIT =    0x40000000;
+    const int32_t ADD =     0x40000001;
+    const int32_t SUB =     0x40000002;
+    const int32_t MUL =     0x40000003;
+    const int32_t DIV =     0x40000004;
+
+}
 
 class AVM32{
     // private variables
     int32_t pc = 0;                 // program counter
-    int32_t sp = -1;                 // stack pointer
-    std::vector<int32_t> memory;    // stack memory
+    int32_t sp = -1;                // stack pointer
+    std::vector<int32_t> memory;     // stack memory
     int32_t typ = 0;                // type register
     int32_t dat = 0;                // data register
     int32_t running = 1;            // running register

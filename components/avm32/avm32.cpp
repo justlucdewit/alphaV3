@@ -7,8 +7,8 @@
  *
  * header:
  * 00 => positive integer
- * 01 => negative integer
- * 10 => primative instruction
+ * 01 => primative instruction
+ * 10 => negative integer
  * 11 => undefined
  */
 
@@ -39,11 +39,13 @@ void AVM32::decode() {
 }
 
 void AVM32::execute() {
-    if (typ == 0x00000000 || typ == 0x10000000){
+    std::cout << "data = " << dat << " ";
+    std::cout << "type = " << typ << "\n";
+    if (typ == 0 || typ == 2){
         sp++;
         std::cout << "push " << dat << "\n";
         memory[sp] = dat;
-    }else{
+    }else if (typ == 1){
         doPrimitive();
     }
 }
