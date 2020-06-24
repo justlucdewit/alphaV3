@@ -8,6 +8,7 @@
 #include <cmath>
 #include <random>
 #include <fstream>
+#include <cstdlib>
 
 #include "../tokenSys/tokenSys.hpp"
 #include "../variableSystem/variableSyste.hpp"
@@ -79,6 +80,8 @@ void initCommands(){
 
     argData["fappend"] = {{alph_variable, alph_string}, {alph_variable, alph_string}};
 
+    argData["exec"] ={{alph_variable, alph_string}};
+
     argData["cat"] = {{alph_variable}, {alph_variable, alph_string}};
 
     argData["exit"] = {{alph_number, alph_variable}};
@@ -96,6 +99,22 @@ void initCommands(){
         }else{
             memory[arguments[0].value].strVal += arguments[1].value;
         }
+    };
+
+    functions["exec"] = [](ARGUMENTS){
+        std::string command;
+        if (arguments[0].type == alph_string) {
+            command = arguments[0].value;
+        } else {
+            testVar(arguments[0].value, memory);
+            if (memory[arguments[0].value].isNum) {
+                throwError("[ERROR 405] exec command must be a string value");
+            } else {
+                command = memory[arguments[0].value].strVal;
+            }
+        }
+
+        std::system(command.c_str());
     };
 
     functions["exit"] = [](ARGUMENTS){

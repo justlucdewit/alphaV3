@@ -1,0 +1,24 @@
+let testingNum 1
+let summation 0
+
+:loop
+	let clone testingNum
+	mod clone 3
+	gotoifis clone 0 addNumber
+
+	let clone testingNum
+	mod clone 5
+	gotoifis clone 0 addNumber
+
+	:continueAfterAdd
+	
+	more testingNum
+gotoiflss testingNum 1000 loop
+
+print "the sum of all multiples of 3 and 5 below 1000 is: "
+print summation
+exit 0
+
+:addNumber
+	add summation testingNum
+goto continueAfterAdd

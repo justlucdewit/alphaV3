@@ -1,2 +1,2 @@
 # alphaV3
-optimized alpha engine for alphacode
+the default interpreter for alphacode

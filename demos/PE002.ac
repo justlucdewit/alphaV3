@@ -1,0 +1,31 @@
+let a 1
+let b 1
+let c 0
+let sum 0
+
+print b
+print "\n"
+
+:nextFib
+	add c b
+	add c a
+	let a b
+	let b c
+	let c 0
+
+	let clone b
+	mod clone 2
+	gotoifis clone 0 addSum
+	:continueAfterAddSum
+
+	print b
+	print "\n"
+gotoiflss b 4000000 nextFib
+
+print "the sum of all fibonachi terms whos value do not exceed 4 million, and are even is: "
+print sum
+exit 0
+
+:addSum
+	add sum b
+goto continueAfterAddSum
